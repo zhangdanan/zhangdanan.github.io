@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>redis | Hexo</title>
+  <meta name="keywords" content=" redis ">
+  <meta name="description" content="redis | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Java">
+<meta property="og:url" content="http://example.com/Java/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-09T14:08:59.000Z">
+<meta property="article:modified_time" content="2021-11-09T14:08:59.467Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/zhangdanan"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/35cb7bd5a133"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/feng-pei-ban-de-xia-tian"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:2491152384@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=2491152384&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(40)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        
+                        工具
+                        <small>(12)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端">
+                        
+                        前端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据库">
+                        
+                        数据库
+                        <small>(9)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="其他">
+                        
+                        其他
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="中间件">
+                        
+                        中间件
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+<input type="hidden" id="yelog_site_word_count" value="76.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>chrome插件</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>english</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>evernote</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>idea</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>json</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>junit</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JWT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>maven</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mq</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>navicat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>servlet</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>yarn</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/linkedList/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="LinkedList">LinkedList</span>
+            <span class="post-date" title="2021-11-09 21:18:23">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/HashMap/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="HashMap">HashMap</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/sql%E4%BC%98%E5%8C%96/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="sql优化">sql优化</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/redis-error/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis-error">redis-error</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis">redis</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/Navicat%E8%BF%9E%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2%E7%9A%84mysql/"
+           data-tag="mysql,navicat"
+           data-author="" >
+            <span class="post-title" title="Navicat连接阿里云服务器上面的mysql">Navicat连接阿里云服务器上面的mysql</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql%E9%A2%98%E7%9B%AE/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql的一些题目">Mysql的一些题目</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql-error/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql-error">Mysql-error</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql基础知识">Mysql基础知识</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/yarn/"
+           data-tag="yarn"
+           data-author="" >
+            <span class="post-title" title="yarn">yarn</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/vue-error/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue-error">vue-error</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/json/"
+           data-tag="json"
+           data-author="" >
+            <span class="post-title" title="json">json</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/html/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html">html</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/CentOS%207%E4%B8%8B%E5%90%AF%E5%8A%A8%E3%80%81%E5%85%B3%E9%97%AD%E3%80%81%E9%87%8D%E5%90%AF%E3%80%81%E6%9F%A5%E7%9C%8BMySQL%E6%9C%8D%E5%8A%A1/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="CentOS 7下启动、关闭、重启、查看MySQL服务">CentOS 7下启动、关闭、重启、查看MySQL服务</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="Nginx">Nginx</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/Maven/"
+           data-tag="maven"
+           data-author="" >
+            <span class="post-title" title="maven">maven</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown">markdown</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85jdk8.0/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux系统安装jdk8.0">Linux系统安装jdk8.0</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux%E5%A4%A7%E5%85%A8/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux大全">Linux大全</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux">Linux</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/Linux%EF%BC%88CentOS7%EF%BC%89%E5%AE%89%E8%A3%85Nginx%EF%BC%88%E9%99%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%EF%BC%89/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux（CentOS7）安装Nginx（附简单配置）">Linux（CentOS7）安装Nginx（附简单配置）</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/junit-error/"
+           data-tag="junit"
+           data-author="" >
+            <span class="post-title" title="junit-error">junit-error</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/junit/"
+           data-tag="junit"
+           data-author="" >
+            <span class="post-title" title="junit">junit</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/idea/"
+           data-tag="idea"
+           data-author="" >
+            <span class="post-title" title="idea">idea</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/git-error/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git-error">git-error</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git">git</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/evernote/"
+           data-tag="evernote"
+           data-author="" >
+            <span class="post-title" title="Evernote">Evernote</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 其他 "
+           href="/2021/11/10/english/"
+           data-tag="english"
+           data-author="" >
+            <span class="post-title" title="english">english</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker">docker</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 其他 "
+           href="/2021/11/10/Chrome%E6%8F%92%E4%BB%B6/"
+           data-tag="chrome插件"
+           data-author="" >
+            <span class="post-title" title="chrome插件">chrome插件</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/JWT/"
+           data-tag="JWT"
+           data-author="" >
+            <span class="post-title" title="JWT">JWT</span>
+            <span class="post-date" title="2021-11-10 14:55:48">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/servlet/"
+           data-tag="servlet"
+           data-author="" >
+            <span class="post-title" title="Servlet">Servlet</span>
+            <span class="post-date" title="2021-11-10 14:55:46">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/RocketMq/"
+           data-tag="mq"
+           data-author="" >
+            <span class="post-title" title="RocketMQ">RocketMQ</span>
+            <span class="post-date" title="2021-11-10 14:55:41">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/ArrayList/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="ArrayList">ArrayList</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/09/Mysql%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql">Mysql</span>
+            <span class="post-date" title="2021-11-09 20:52:34">2021/11/09</span>
+        </a>
+        
+        <a  class="All 前端 "
+           href="/2021/11/10/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="前端常用办法">前端常用办法</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(GC%E7%AE%97%E6%B3%95%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM算法">JVM算法</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM类的加载机制">JVM类的加载机制</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM学习路线">JVM学习路线</span>
+            <span class="post-date" title="2021-11-09 21:18:28">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM内存结构">JVM内存结构</span>
+            <span class="post-date" title="2021-11-09 21:18:26">2021/11/09</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-redis" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">redis</h1>
+    
+    <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="数据库">数据库</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">redis</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2021-11-10 17:47:03'>2021-11-10 15:16</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:3.8k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis%E6%A6%82%E8%BF%B0%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-text">Redis概述（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis"><span class="toc-text">Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E7%AE%80%E4%BB%8B"><span class="toc-text">Redis简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E4%BC%98%E5%8A%BF"><span class="toc-text">Redis优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E4%B8%8E%E5%85%B6%E4%BB%96key-value%E5%AD%98%E5%82%A8%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C"><span class="toc-text">Redis与其他key-value存储有什么不同</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2019-8-21-redis%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-text">2019-8-21-redis的安装（二）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%8B%E8%BD%BD-Redis"><span class="toc-text">一、下载 Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85-Redis"><span class="toc-text">二、安装 Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%90%E8%A1%8C-Redis"><span class="toc-text">三、运行 Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">四、客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">五、修改配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2019-8-22-redis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%B8%89%EF%BC%89"><span class="toc-text">2019-8-22-redis的数据类型（三）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Redis数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">String字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash%E5%93%88%E5%B8%8C"><span class="toc-text">Hash哈希</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-%E5%88%97%E8%A1%A8"><span class="toc-text">List(列表)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set%EF%BC%88%E9%9B%86%E5%90%88%EF%BC%89"><span class="toc-text">Set（集合）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zset-sorted-set-%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88"><span class="toc-text">Zset(sorted set:有序集合)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2019-8-22-redis%E7%9A%84%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">2019-8-22-redis的相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-keys%E9%94%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">1.keys键操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-string%E7%B1%BB%E5%9E%8B%E6%93%8D%E4%BD%9C"><span class="toc-text">2.string类型操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-list%E9%93%BE%E8%A1%A8%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9C%89%E5%BA%8F%EF%BC%8C%E5%8F%AF%E9%87%8D%E5%A4%8D%EF%BC%89"><span class="toc-text">3.list链表操作（有序，可重复）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-hash%E6%95%A3%E5%88%97%E6%93%8D%E4%BD%9C"><span class="toc-text">4.hash散列操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-set%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C%EF%BC%88%E6%97%A0%E5%BA%8F%EF%BC%8C%E5%94%AF%E4%B8%80%EF%BC%89"><span class="toc-text">5.set集合操作（无序，唯一）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-sorted-set%E6%9C%89%E5%BA%8F%E9%9B%86%E5%90%88%E6%93%8D%E4%BD%9C%EF%BC%88%E6%9C%89%E5%BA%8F%EF%BC%8C%E5%94%AF%E4%B8%80%EF%BC%89"><span class="toc-text">6.sorted set有序集合操作（有序，唯一）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-redis%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BA%8B%E5%8A%A1"><span class="toc-text">7.redis的基本事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-redis%E6%8C%81%E4%B9%85%E5%8C%96%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">8.redis持久化的两种方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#8-1-%E5%BF%AB%E7%85%A7%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">8.1.快照持久化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-2-AOF%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">8.2.AOF持久化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-redis%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="toc-text">9.redis主从复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C"><span class="toc-text">10.处理系统故障</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Jedis%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">Jedis的使用</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Redis概述（一）"><a href="#Redis概述（一）" class="headerlink" title="Redis概述（一）"></a>Redis概述（一）</h1><h3 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h3><p>REmote DIctionary Server(Redis) 是一个由Salvatore Sanfilippo写的key-value存储系统。</p>
+<p>Redis是一个开源的使用ANSI C语言编写、遵守BSD协议、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。</p>
+<p>它通常被称为数据结构服务器，因为值（value）可以是 字符串(String), 哈希(Hash), 列表(list), 集合(sets) 和 有序集合(sorted sets)等类型。</p>
+<h3 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h3><p>Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value数据库。</p>
+<p>Redis 与其他 key - value 缓存产品有以下三个特点：</p>
+<ul>
+<li>Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。</li>
+<li>Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。</li>
+<li>Redis支持数据的备份，即master-slave模式的数据备份。</li>
+</ul>
+<h3 id="Redis优势"><a href="#Redis优势" class="headerlink" title="Redis优势"></a>Redis优势</h3><ul>
+<li>性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。</li>
+<li>丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。</li>
+<li>原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。</li>
+<li>丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。</li>
+</ul>
+<h3 id="Redis与其他key-value存储有什么不同"><a href="#Redis与其他key-value存储有什么不同" class="headerlink" title="Redis与其他key-value存储有什么不同"></a>Redis与其他key-value存储有什么不同</h3><ul>
+<li>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径。Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象。</li>
+<li>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存。在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情。同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问。</li>
+</ul>
+<h1 id="2019-8-21-redis的安装（二）"><a href="#2019-8-21-redis的安装（二）" class="headerlink" title="2019-8-21-redis的安装（二）"></a>2019-8-21-redis的安装（二）</h1><h3 id="一、下载-Redis"><a href="#一、下载-Redis" class="headerlink" title="一、下载 Redis"></a>一、下载 Redis</h3><p>下载地址： <a target="_blank" rel="noopener" href="https://github.com/MicrosoftArchive/redis/releases">https://github.com/MicrosoftA…</a></p>
+<p>Redis 官方没有 Windows 版，但是微软的开发人员移植了一个。页面中会有两种下载格式：.msi 安装包和 .zip 压缩包。本文仅介绍前者，因为用起来比较方便。</p>
+<h3 id="二、安装-Redis"><a href="#二、安装-Redis" class="headerlink" title="二、安装 Redis"></a>二、安装 Redis</h3><p>如果你下载的是 .msi 结尾的安装包，那么双击一路 Next 就安装完成了。</p>
+<p><img src="https://segmentfault.com/img/bVWW7K?w=495&h=387" alt="clipboard.png"></p>
+<h3 id="三、运行-Redis"><a href="#三、运行-Redis" class="headerlink" title="三、运行 Redis"></a>三、运行 Redis</h3><p>安装完之后你就会发现有一个名为 Redis 的服务已经在运行了。</p>
+<p><img src="https://segmentfault.com/img/bVWW8W?w=666&h=238" alt="clipboard.png"></p>
+<p>你可以在服务控制界面中启动和停止它。</p>
+<h3 id="四、客户端"><a href="#四、客户端" class="headerlink" title="四、客户端"></a>四、客户端</h3><p>Redis 提供一个命令行客户端，就在安装目录下。但是为了方便使用，我们还是要先把它加入到 PATH 里面。方法是：</p>
+<ol>
+<li>按 Win+R 打开运行对话框，键入 cmd 命令打开命令行窗口。</li>
+<li>键入下面的命令： <code>setx PATH &quot;%PATH%;C:\Program Files\Redis&quot;</code>，其中分号后面的路径就是刚才 Redis 的安装目录。</li>
+<li>如果得到提示 <code>成功: 指定的值已得到保存。</code>，那么表示 PATH 设置成功，关闭命令行窗口。</li>
+<li>重新打开另一个命令行窗口（因为环境变量的修改只会在新的命令行窗口生效），键入命令 <code>redis-cli</code> 即可运行 Redis 客户端了：</li>
+</ol>
+<p><img src="https://segmentfault.com/img/bVWXcu?w=528&h=262" alt="clipboard.png"></p>
+<h3 id="五、修改配置"><a href="#五、修改配置" class="headerlink" title="五、修改配置"></a>五、修改配置</h3><p>Redis 服务器的缺省端口是 6379，而且只能本机访问。如果你想换一个端口，或者开放局域网访问，那么就需要修改配置文件。配置文件就在 Redis 安装目录下：</p>
+<ol>
+<li>打开 Redis 安装目录下的 <code>redis.windows-service.conf</code> 文件。</li>
+<li>如果你想开放局域网访问，那么找到 <code>bind 127.0.0.1</code>，改为 <code>bind 0.0.0.0</code>。</li>
+<li>如果你想修改端口，例如改为 10000，那么找到 <code>port 6379</code>，改为 <code>port 10000</code>。</li>
+<li>修改完毕后，保存文件。</li>
+<li>重新启动服务：</li>
+</ol>
+<p><img src="https://segmentfault.com/img/bVWXd3?w=666&h=293" alt="clipboard.png"></p>
+<p>如果你改了端口号，那么运行客户端的时候就要指定新的端口号，方法是使用 <code>-p</code> 参数（假设新端口号为 10000）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -p 10000</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="2019-8-22-redis的数据类型（三）"><a href="#2019-8-22-redis的数据类型（三）" class="headerlink" title="2019-8-22-redis的数据类型（三）"></a>2019-8-22-redis的数据类型（三）</h1><h3 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h3><p>Redis支持五种数据类型：String 、hash、list、set、zset（sorted set：有序集合 ）</p>
+<h3 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h3><p>String类型是Redis最基本的数据类型，一个键最大可以存储512MB</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; set name zhang</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line">&quot;zhang&quot;</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Hash哈希"><a href="#Hash哈希" class="headerlink" title="Hash哈希"></a>Hash哈希</h3><p>Redis hash是一个键值对集合</p>
+<p>Redis hash是一个string类型的field和value的映射表，hash特别适合用于存储对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hmset zhang:1 usernamae wang password zhang</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hgetall zhang:1</span><br><span class="line">1) &quot;usernamae&quot;</span><br><span class="line">2) &quot;wang&quot;</span><br><span class="line">3) &quot;password&quot;</span><br><span class="line">4) &quot;zhang&quot;</span><br><span class="line">127.0.0.1:6379&gt; hmset zhang:2 username zhang password wang</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hgetall zhang:2</span><br><span class="line">1) &quot;username&quot;</span><br><span class="line">2) &quot;zhang&quot;</span><br><span class="line">3) &quot;password&quot;</span><br><span class="line">4) &quot;wang&quot;</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="List-列表"><a href="#List-列表" class="headerlink" title="List(列表)"></a>List(列表)</h3><p>Redis列表是简单的字符串列表，按照插入顺序排序，你可以添加一个元素到列表的头部或者尾部，列表最多可存储 232 - 1 元素 (4294967295, 每个列表可存储40多亿)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush spring zhang</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; lpush spring wang</span><br><span class="line">(integer) 2</span><br><span class="line">127.0.0.1:6379&gt; lpush spring yang</span><br><span class="line">(integer) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange spring 0 5</span><br><span class="line">1) &quot;yang&quot;</span><br><span class="line">2) &quot;wang&quot;</span><br><span class="line">3) &quot;zhang&quot;</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Set（集合）"><a href="#Set（集合）" class="headerlink" title="Set（集合）"></a>Set（集合）</h3><p>Redis的set是string类型的无序集合，集合是通过哈希表实现的，所以添加、删除、查找的复杂度都是O（1）</p>
+<p>语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sadd key member</span><br></pre></td></tr></table></figure>
+
+<p>实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd li java</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sadd li python</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sadd li go</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; sadd li php</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; smembers li</span><br><span class="line">1) &quot;php&quot;</span><br><span class="line">2) &quot;go&quot;</span><br><span class="line">3) &quot;python&quot;</span><br><span class="line">4) &quot;java&quot;</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Zset-sorted-set-有序集合"><a href="#Zset-sorted-set-有序集合" class="headerlink" title="Zset(sorted set:有序集合)"></a>Zset(sorted set:有序集合)</h3><p>Redis zset和set一样也是string类型元素的集合，且不允许重复的成员，不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。</p>
+<p>语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zadd key score member</span><br></pre></td></tr></table></figure>
+
+<p>实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd zhu 0 zhang</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd zhu 1 wang</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd zhu 2 adasjdh</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd zhu 5 dsaj</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd zhu 9 zdsa</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zadd zhu 3 dasda</span><br><span class="line">(integer) 1</span><br><span class="line">127.0.0.1:6379&gt; zrangebyscore zhu 0 10</span><br><span class="line">1) &quot;zhang&quot;</span><br><span class="line">2) &quot;wang&quot;</span><br><span class="line">3) &quot;adasjdh&quot;</span><br><span class="line">4) &quot;dasda&quot;</span><br><span class="line">5) &quot;dsaj&quot;</span><br><span class="line">6) &quot;zdsa&quot;</span><br><span class="line">127.0.0.1:6379&gt;c</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="2019-8-22-redis的相关命令"><a href="#2019-8-22-redis的相关命令" class="headerlink" title="2019-8-22-redis的相关命令"></a>2019-8-22-redis的相关命令</h1><h3 id="1-keys键操作"><a href="#1-keys键操作" class="headerlink" title="1.keys键操作"></a>1.keys键操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">exists key　　　　　　　　　测试指定key是否存在</span><br><span class="line">del key1 key2….keyN　　　　　　　　删除指定key</span><br><span class="line">type key　　　　　　　　　返回指定key的value类型</span><br><span class="line">keys pattern　　　　　　　返回指定模式的所有key</span><br><span class="line">rename oldkey newkey　　　　　　　改名字</span><br><span class="line">dbsize　　　　　　　　　　返回当前数据路的key数量</span><br><span class="line">expire key seconds　　　　　 为key指定过期时间</span><br><span class="line">ttl key　　　　　　　　　　返回key的过期剩余秒数</span><br><span class="line">select db-index　　　　　　　　　　　选择数据库</span><br><span class="line">move key db-index　     把key从当前数据库移动到指定数据库</span><br><span class="line">flushdb　　　　　　　　　  删除当前数据库所有key</span><br><span class="line">flushall　　　　　　 　删除所有数据库中的所有key</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-string类型操作"><a href="#2-string类型操作" class="headerlink" title="2.string类型操作"></a>2.string类型操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">set key value　　　　　　　　　　　　设置key对应值为string类型的value</span><br><span class="line">setex key seconds value　　　　　　设置key对应值为string类型的value,增加到期时间</span><br><span class="line">mset key1 value1…keyN valueN　　　一次设置多个key的值</span><br><span class="line">mget key1 …keyN　　　　　　　　　　一次获取多个key的值</span><br><span class="line">incr key　　　　　　　　　　　　　　对key的值++操作，并返回新值</span><br><span class="line">decr key　　　　　　　　　　　　　　同上，但是做的是–操作</span><br><span class="line">incrby key integer　　　　　　　　　　同incr，加指定值</span><br><span class="line">decrby key integer　　　　　　　　　同desr，减指定值</span><br><span class="line">incrbyfloat key increment　　　　　　对key的值增加一个浮点数</span><br><span class="line">append key value　　　　　　　　　给指定key的字符串追加value</span><br><span class="line">substr key start end　　　　　　　　返回截取过的key的字符串值　</span><br><span class="line">getrange key start end　　　　　　　获取存储在key上的值的一个子字符串</span><br><span class="line">setrange key offset value　　　　　　将从start偏移量开始的子串设置指定的值</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-list链表操作（有序，可重复）"><a href="#3-list链表操作（有序，可重复）" class="headerlink" title="3.list链表操作（有序，可重复）"></a>3.list链表操作（有序，可重复）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">lpush key string　　　　　　　　　　　在key对应list的头部添加字符串元素　　　　　　　　　　　　　</span><br><span class="line">rpop key　　　　　　　　　　　　　　　　在list的尾部删除元素，并返回删除元素</span><br><span class="line">rpush key string</span><br><span class="line">lpop key</span><br><span class="line">lpush key string</span><br><span class="line">llen key　　　　　　　　　　　　　　　　　返回对应list的长度</span><br><span class="line">lrange key start end　　　　　　　　　　　返回指定区间内的元素，从下表0开始</span><br><span class="line">ltrim key start end　　　　　　　　　　　　截取list, 保留指定区间内元素</span><br><span class="line">lindex key 下标　　　　　　　　　　　　　获取列表下标对应的指定元素</span><br><span class="line">blpop key[key…] time out　　　　　　　　删除，并获得该列的第一元素， 或阻塞，直到有一个可用</span><br><span class="line">brpop key[key…] time out　　　　　　　　删除， 并获得该列的最后一个元素， 或阻塞，直到有一个可用</span><br><span class="line">rpoplpush source destination　　　　　　　删除列表中的最后一个元素，将其追加到另一个列表</span><br><span class="line">brpoplpush source destination timeout　　弹出一个列表的值，将他推到另一个列表，并返回他，直到有一个可用 </span><br><span class="line"></span><br><span class="line">可以模拟 队列（先进后出） 和 栈（先进先出）</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-hash散列操作"><a href="#4-hash散列操作" class="headerlink" title="4.hash散列操作"></a>4.hash散列操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">hdel key field[field…]　　　　　　　　删除一个或多个hash的field</span><br><span class="line">hexists key field　　　　　　　　　　判断field是否存在hash中</span><br><span class="line">hget key field　　　　　　　　　　　获取hash中field的值</span><br><span class="line">hgetall key　　　　　　　　　　　　从hash中读取全部的域和值</span><br><span class="line">hincrby key field increment　　　　将hash中指定域的值增加给定的值</span><br><span class="line">hincrbyfloat key field increment　　将hash中指定域的值增加给定的浮点数</span><br><span class="line">hkeys key　　　　　　　　　　　　　获取hash 中所有field</span><br><span class="line">hlen key　　　　　　　　　　　　　获取hash中所有字段的数量</span><br><span class="line">hmget key field[field…]　　　　　　获取hash里面指定字段的值</span><br><span class="line">hmset key field[field…]　　　　　　设置hash字段值</span><br><span class="line">hset key field value　　　　　　　　设置hash里面一个字段的值</span><br><span class="line">hsetnx key field value　　　　　　　设置hash的一个字段，只有这个字段不存在是有效</span><br><span class="line">hstrlen key field　　　　　　　　　　获取hash里面指定field的长度</span><br><span class="line">hvals key　　　　　　　　　　　　　获取hash的所有值</span><br><span class="line">hscan key cursor　　　　　　　　　迭代hash里面的元素</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-set集合操作（无序，唯一）"><a href="#5-set集合操作（无序，唯一）" class="headerlink" title="5.set集合操作（无序，唯一）"></a>5.set集合操作（无序，唯一）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sadd key member　　　　　　　　　添加一个string元素到key对应的set集合中</span><br><span class="line">srem key member　　　　　　　　　从key对应set中移除给定元素</span><br><span class="line">smove p1 p2 member　　　　　　　从p1对应set中移除给定元素并添加到p2对应set中</span><br><span class="line">scard key　　　　　　　　　　　　　返回set的元素个数</span><br><span class="line">sismember key member　　　　　　判断member是否在set中</span><br><span class="line">sinter key p1 p2…pN　　　　　　　　返回所有给定key的交集</span><br><span class="line">sunion key p1 p2…pN　　　　　　　返回所有给定key的并集</span><br><span class="line">sdiff key p1 p2…pN　　　　　　　　返回所有给定key 的差集</span><br><span class="line">smembers key　　　　　　　　　　返回key对应set的所有元素，结果是无序的</span><br><span class="line">sinterstore destination key [key….]　获取两个集合的交集，并存储在一个关键的结果集</span><br><span class="line">sunionstore destination key [key…]　合并set集合，并将结果存入新的set里面</span><br><span class="line">sdifferstore destination key[key…]　　获取队列的差集，并存储在一个新的结果集</span><br><span class="line">srandmember key [count]　　　　　从集合中随机获取一个key</span><br><span class="line">spop key[count]　　　　　　　　　　删除并取得一个集合里面的元素</span><br><span class="line">smove source destination member　移动集合里的一个key到另一个集合</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-sorted-set有序集合操作（有序，唯一）"><a href="#6-sorted-set有序集合操作（有序，唯一）" class="headerlink" title="6.sorted set有序集合操作（有序，唯一）"></a>6.sorted set有序集合操作（有序，唯一）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> zadd key score member　　　　　　添加元素到集合，元素在集集合中存在则更新应对的score </span><br><span class="line"> zrem key member　　　　　　　　　删除指定元素 </span><br><span class="line"> zcount key min max　　　　　　　　返回分数范围内的成员变量 </span><br><span class="line"> zincrby key incr member　　　　　　按照incr幅度增加对应member的score值，返回score值 </span><br><span class="line">zrank key member　　　　　　　　　返回指定元素在集合中的排名（下标），集合中元素是按score从小到大排序的 </span><br><span class="line">zrevrank key member　　　　　　　集合中元素是按score从大到小排序的 </span><br><span class="line">zrange key start end　　　　　　　　从集合中选择指定区间的元素，返回的是有序集合 </span><br><span class="line"> zrevrange key start end　　　　　　同上，返回结果是按score逆序的 </span><br><span class="line">zcard key　　　　　　　　　　　　　返回集合中元素的个数 </span><br><span class="line">zscore key member　　　　　　　　返回给定元素对应的score </span><br><span class="line">zremrangebyrank key min max　　　删除集合中排名在给定区间的元素 </span><br><span class="line">zinterstore distination numkeys　　　相交多个结果集，导致排序的设置存储在一个新的结果集 </span><br><span class="line">zunionstore destination numberkeys　添加多个排序集合导致排序的设置存储在一个新的结果集，可以实现取得最大值（max），取得最小值（min）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-redis的基本事务"><a href="#7-redis的基本事务" class="headerlink" title="7.redis的基本事务"></a>7.redis的基本事务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">乐观锁： watch只会在数据被其他客户端抢先修改了的情况下通知执行这个命令的客户端，而不会阻止其他客户端对数据进行修改 </span><br><span class="line"></span><br><span class="line"> discard　　　　　　　　　　　　　　丢弃所有multi之后发的命令 </span><br><span class="line"> exec　　　　　　　　　　　　　　　执行所有multi之后发放人命令 </span><br><span class="line"> multi　　　　　　　　　　　　　　　标记一个事务块开始 </span><br><span class="line"> unwatch　　　　　　　　　　　　　取消事务命令 </span><br><span class="line"> watch key[key…]　　　　　　　　　　锁定key，直到执行了multi/exec命令</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-redis持久化的两种方式"><a href="#8-redis持久化的两种方式" class="headerlink" title="8.redis持久化的两种方式"></a>8.redis持久化的两种方式</h3><h5 id="8-1-快照持久化"><a href="#8-1-快照持久化" class="headerlink" title="8.1.快照持久化"></a>8.1.快照持久化</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1 ./redis-cli bgsave 异步快照持久化命令　　 save操作是在主线程中保存快照的（不推荐）</span><br><span class="line">2 当执行shutdown命令后，会执行一个save命令，执行完毕之后关闭服务器</span><br><span class="line">3 当从服务器向主服务器发送一个sync命令来执行一次复制操作，那么主服务器会执行bgsave命令</span><br><span class="line">4 配置文件快照配置信息 </span><br><span class="line">save 900 1 （900秒内有1次修改备份）</span><br><span class="line">save 300 10 （900秒内有10次修改备份）</span><br><span class="line">save 60 10000 （60 秒内有10000 次修改备份）</span><br><span class="line"></span><br><span class="line">原文链接：https://blog.csdn.net/dongganen/article/details/78882024</span><br></pre></td></tr></table></figure>
+
+<h5 id="8-2-AOF持久化"><a href="#8-2-AOF持久化" class="headerlink" title="8.2.AOF持久化"></a>8.2.AOF持久化</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.开启AOF持久化(设置之前所有数据被清空)</span><br><span class="line">2.开启AOF持久化—&gt;修改配置文件 appendonly yes</span><br><span class="line">3.AOF备份存储文件—&gt; appendfilename appendonly.aof</span><br><span class="line">    a.appendfsync always                                    </span><br><span class="line">    b.每次收到写命令就立即强制写入磁盘，最慢的，但是保证完全的持久化，不推荐使    用，还有可能影响固态硬盘的寿命</span><br><span class="line">    c.appendfsync everysec                                 </span><br><span class="line">    d.每秒钟强制写入磁盘一次，在性能和持久化方面做了很好的折中，推荐</span><br><span class="line">    e.appendfsync no                                          </span><br><span class="line">4.AOF备份文件优化处理 ./redis-cli bgrewriteaof</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="9-redis主从复制"><a href="#9-redis主从复制" class="headerlink" title="9.redis主从复制"></a>9.redis主从复制</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.从服务器（可读）配置文件修改：slaveof (主服务器ip地址和端口号)ip port</span><br><span class="line">2.从服务器默认禁止写入操作：slave-read-only yes</span><br><span class="line">3.当3个或3个以上的从数据库连接到主数据库时，主数据库才可以写入：min-slaves-to-write 3</span><br><span class="line">4.允许从数据库失去连接的最长时间：min-slave2-max-lag 10</span><br><span class="line">5.slaveof on one 服务器终止复制操作</span><br><span class="line">6.slaveof host port 服务器开始复制一个新的主服务器</span><br><span class="line">7.从服务器在进行同步时，会清空自己的所有数据</span><br><span class="line">8.redis不支持主主复制</span><br><span class="line">9.主从链：随着读请求操作的重要性明显高于写请求的操作性，增加从服务器，减轻主服务器的负担，从服务器可以有自己的从服务器</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-处理系统故障"><a href="#10-处理系统故障" class="headerlink" title="10.处理系统故障"></a>10.处理系统故障</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">遇到系统故障时,redis提供了数据恢复工具：redis-check-aof 和 redis-check-dump</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Jedis的使用"><a href="#Jedis的使用" class="headerlink" title="Jedis的使用"></a>Jedis的使用</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a1038eed6d44">https://www.jianshu.com/p/a1038eed6d44</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

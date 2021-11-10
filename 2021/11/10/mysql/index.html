@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mysql基础知识 | Hexo</title>
+  <meta name="keywords" content=" mysql ">
+  <meta name="description" content="Mysql基础知识 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Java">
+<meta property="og:url" content="http://example.com/Java/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-09T14:08:59.000Z">
+<meta property="article:modified_time" content="2021-11-09T14:08:59.467Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/zhangdanan"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/35cb7bd5a133"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/feng-pei-ban-de-xia-tian"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:2491152384@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=2491152384&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(40)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        
+                        工具
+                        <small>(12)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端">
+                        
+                        前端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据库">
+                        
+                        数据库
+                        <small>(9)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="其他">
+                        
+                        其他
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="中间件">
+                        
+                        中间件
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+<input type="hidden" id="yelog_site_word_count" value="76.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>chrome插件</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>english</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>evernote</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>idea</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>json</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>junit</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JWT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>maven</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mq</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>navicat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>servlet</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>yarn</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/linkedList/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="LinkedList">LinkedList</span>
+            <span class="post-date" title="2021-11-09 21:18:23">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/HashMap/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="HashMap">HashMap</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/sql%E4%BC%98%E5%8C%96/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="sql优化">sql优化</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/redis-error/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis-error">redis-error</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis">redis</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/Navicat%E8%BF%9E%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2%E7%9A%84mysql/"
+           data-tag="mysql,navicat"
+           data-author="" >
+            <span class="post-title" title="Navicat连接阿里云服务器上面的mysql">Navicat连接阿里云服务器上面的mysql</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql%E9%A2%98%E7%9B%AE/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql的一些题目">Mysql的一些题目</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql-error/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql-error">Mysql-error</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql基础知识">Mysql基础知识</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/yarn/"
+           data-tag="yarn"
+           data-author="" >
+            <span class="post-title" title="yarn">yarn</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/vue-error/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue-error">vue-error</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/json/"
+           data-tag="json"
+           data-author="" >
+            <span class="post-title" title="json">json</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/html/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html">html</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/CentOS%207%E4%B8%8B%E5%90%AF%E5%8A%A8%E3%80%81%E5%85%B3%E9%97%AD%E3%80%81%E9%87%8D%E5%90%AF%E3%80%81%E6%9F%A5%E7%9C%8BMySQL%E6%9C%8D%E5%8A%A1/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="CentOS 7下启动、关闭、重启、查看MySQL服务">CentOS 7下启动、关闭、重启、查看MySQL服务</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="Nginx">Nginx</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/Maven/"
+           data-tag="maven"
+           data-author="" >
+            <span class="post-title" title="maven">maven</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown">markdown</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85jdk8.0/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux系统安装jdk8.0">Linux系统安装jdk8.0</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux%E5%A4%A7%E5%85%A8/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux大全">Linux大全</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux">Linux</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/Linux%EF%BC%88CentOS7%EF%BC%89%E5%AE%89%E8%A3%85Nginx%EF%BC%88%E9%99%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%EF%BC%89/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux（CentOS7）安装Nginx（附简单配置）">Linux（CentOS7）安装Nginx（附简单配置）</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/junit-error/"
+           data-tag="junit"
+           data-author="" >
+            <span class="post-title" title="junit-error">junit-error</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/junit/"
+           data-tag="junit"
+           data-author="" >
+            <span class="post-title" title="junit">junit</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/idea/"
+           data-tag="idea"
+           data-author="" >
+            <span class="post-title" title="idea">idea</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/git-error/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git-error">git-error</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git">git</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/evernote/"
+           data-tag="evernote"
+           data-author="" >
+            <span class="post-title" title="Evernote">Evernote</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 其他 "
+           href="/2021/11/10/english/"
+           data-tag="english"
+           data-author="" >
+            <span class="post-title" title="english">english</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker">docker</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 其他 "
+           href="/2021/11/10/Chrome%E6%8F%92%E4%BB%B6/"
+           data-tag="chrome插件"
+           data-author="" >
+            <span class="post-title" title="chrome插件">chrome插件</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/JWT/"
+           data-tag="JWT"
+           data-author="" >
+            <span class="post-title" title="JWT">JWT</span>
+            <span class="post-date" title="2021-11-10 14:55:48">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/servlet/"
+           data-tag="servlet"
+           data-author="" >
+            <span class="post-title" title="Servlet">Servlet</span>
+            <span class="post-date" title="2021-11-10 14:55:46">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/RocketMq/"
+           data-tag="mq"
+           data-author="" >
+            <span class="post-title" title="RocketMQ">RocketMQ</span>
+            <span class="post-date" title="2021-11-10 14:55:41">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/ArrayList/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="ArrayList">ArrayList</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/09/Mysql%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql">Mysql</span>
+            <span class="post-date" title="2021-11-09 20:52:34">2021/11/09</span>
+        </a>
+        
+        <a  class="All 前端 "
+           href="/2021/11/10/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="前端常用办法">前端常用办法</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(GC%E7%AE%97%E6%B3%95%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM算法">JVM算法</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM类的加载机制">JVM类的加载机制</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM学习路线">JVM学习路线</span>
+            <span class="post-date" title="2021-11-09 21:18:28">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM内存结构">JVM内存结构</span>
+            <span class="post-date" title="2021-11-09 21:18:26">2021/11/09</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-mysql" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Mysql基础知识</h1>
+    
+    <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="数据库">数据库</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">mysql</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2021-11-10 17:46:42'>2021-11-10 15:16</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:10.4k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">MySQL基本数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E5%80%BC%E5%9E%8B"><span class="toc-text">1.数值型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="toc-text">2.浮点型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4"><span class="toc-text">3.日期&#x2F;时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AD%97%E7%AC%A6%E5%9E%8B"><span class="toc-text">4.字符型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%B1%BB%E5%9E%8B"><span class="toc-text">5.二进制类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B"><span class="toc-text">6.特殊类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">如何选择数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E6%95%B4%E6%95%B0%E5%92%8C%E6%B5%AE%E7%82%B9%E6%95%B0"><span class="toc-text">1)、整数和浮点数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E6%B5%AE%E7%82%B9%E6%95%B0%E5%92%8C%E5%AE%9A%E7%82%B9%E6%95%B0"><span class="toc-text">2)、浮点数和定点数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%B1%BB%E5%9E%8B"><span class="toc-text">3)、日期和时间类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81char%E5%92%8Cvarchar"><span class="toc-text">4)、char和varchar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81ENUM%E5%92%8CSET"><span class="toc-text">5)、ENUM和SET</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81BLOB%E5%92%8CTEXT"><span class="toc-text">6)、BLOB和TEXT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BB%8B%E7%BB%8D"><span class="toc-text">常见运算符介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6%E6%A6%82%E8%BF%B0"><span class="toc-text">1)、运算符概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">2)、算数运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">3)、比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">4)、逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-text">5)、位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">6)、运算符优先级</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%82%A8%E5%AD%98%E5%BC%95%E6%93%8E"><span class="toc-text">数据库储存引擎</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BC%95%E6%93%8E%E5%91%BD%E4%BB%A4"><span class="toc-text">查看引擎命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#InnoDB%E5%BC%95%E6%93%8E"><span class="toc-text">InnoDB引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyISAM%E5%BC%95%E6%93%8E"><span class="toc-text">MyISAM引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MEMORY%E5%BC%95%E6%93%8E"><span class="toc-text">MEMORY引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E7%9A%84%E9%80%89%E6%8B%A9"><span class="toc-text">存储引擎的选择</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95"><span class="toc-text">索引</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#B-Tree%E5%8E%9F%E7%90%86"><span class="toc-text">B+Tree原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql%E5%87%BD%E6%95%B0"><span class="toc-text">Mysql函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="toc-text">1、数学函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E7%BB%9D%E5%AF%B9%E5%80%BC%EF%BC%8C%CF%80%EF%BC%8C%E5%B9%B3%E6%96%B9%E6%A0%B9%EF%BC%8C%E5%8E%BB%E4%BD%99%E5%87%BD%E6%95%B0-%E9%80%82%E7%94%A8%E5%B0%8F%E6%95%B0"><span class="toc-text">1)、绝对值，π，平方根，去余函数(适用小数)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E8%8E%B7%E5%8F%96%E6%95%B4%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">2)、获取整数的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E8%8E%B7%E5%8F%96%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">3)、获取随机数的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81Round%E5%87%BD%E6%95%B0-%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E5%87%BD%E6%95%B0-%EF%BC%8Ctruncate-%E5%87%BD%E6%95%B0"><span class="toc-text">4)、Round函数(四舍五入函数)，truncate()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E7%AC%A6%E5%8F%B7%E5%87%BD%E6%95%B0%EF%BC%8C%E5%B9%82%E8%BF%90%E7%AE%97%E5%87%BD%E6%95%B0pow-power-exp"><span class="toc-text">5)、符号函数，幂运算函数pow,power,exp()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81%E8%87%AA%E7%84%B6%E5%AF%B9%E6%95%B0%E8%BF%90%E7%AE%97%E5%92%8C%E4%BB%A510%E4%B8%BA%E5%BA%95%E7%9A%84%E5%AF%B9%E6%95%B0%E8%BF%90%E7%AE%97%EF%BC%8C%E5%BC%A7%E5%BA%A6%EF%BC%8C%E8%A7%92%E5%BA%A6-radians%E8%A7%92%E5%BA%A6%E8%BD%AC%E5%BC%A7%E5%BA%A6%EF%BC%8C%E5%BC%A7%E5%BA%A6%E8%BD%AC%E8%A7%92%E5%BA%A6"><span class="toc-text">6)、自然对数运算和以10为底的对数运算，弧度，角度 radians角度转弧度，弧度转角度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E3%80%81%E6%AD%A3%E5%BC%A6%E5%87%BD%E6%95%B0%E4%BD%99%E5%BC%A6%E5%87%BD%E6%95%B0"><span class="toc-text">7)、正弦函数余弦函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0"><span class="toc-text">2、字符串函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%87%BD%E6%95%B0%E3%80%81concat-ws%E5%BF%BD%E7%95%A5%E7%A9%BA%E5%80%BCnull"><span class="toc-text">1)、字符串函数、concat_ws忽略空值null</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">2)、替换字符串的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2%E3%80%81%E8%8E%B7%E5%8F%96%E6%8C%87%E5%AE%9A%E9%95%BF%E5%BA%A6%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0left-right"><span class="toc-text">3)、大小写转换、获取指定长度字符串的函数left,right</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E5%A1%AB%E5%85%85%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0-%E5%88%A0%E9%99%A4%E7%A9%BA%E6%A0%BC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">4)、填充字符串的函数,删除空格的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E9%87%8D%E5%A4%8D%E7%94%9F%E6%88%90-%E7%A9%BA%E6%A0%BC%E5%87%BD%E6%95%B0%EF%BC%8C%E6%9B%BF%E6%8D%A2%E5%87%BD%E6%95%B0%EF%BC%8C%E6%AF%94%E8%BE%83%E5%A4%A7%E5%B0%8F%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">5)、重复生成,空格函数，替换函数，比较大小的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81%E8%8E%B7%E5%8F%96%E5%AD%90%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">6)、获取子串的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E3%80%81%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%80%BC%EF%BC%8C%E8%BF%94%E5%9B%9E%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E4%BD%8D%E7%BD%AE%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">7)、返回指定位置的值，返回指定字符串的位置的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E3%80%81make-set-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">8)、make_set()函数的使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-text">3、日期和时间函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E8%8E%B7%E5%8F%96%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-text">1)、获取日期时间函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E7%9A%84%E6%95%B0%E5%AD%97%EF%BC%8C%E6%A0%B9%E6%8D%AE%E6%97%B6%E9%97%B4%E8%8E%B7%E5%8F%96%E6%97%A5%E6%9C%9F-%E4%BA%92%E4%B8%BA%E5%8F%8D%E5%87%BD%E6%95%B0"><span class="toc-text">2)、获取时间的数字，根据时间获取日期(互为反函数)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E8%BF%94%E5%9B%9E%E5%BD%93%E5%89%8D%E6%97%B6%E5%8C%BA%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0%EF%BC%8C%E6%97%A5%E6%9C%9F%E6%9C%88%E4%BB%BD%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-text">3)、返回当前时区日期和时间的函数，日期月份时间函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E8%8E%B7%E5%8F%96%E6%8C%87%E5%AE%9A%E6%97%A5%E6%9C%9F%E7%9A%84%E6%8C%87%E5%AE%9A%E5%80%BC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">4)、获取指定日期的指定值的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E6%97%B6%E9%97%B4%E5%92%8C%E7%A7%92%E9%92%9F%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">5)、时间和秒钟转换的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81%E8%AE%A1%E7%AE%97%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-text">6)、计算日期和时间的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E3%80%81%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5%E4%B8%A4%E4%B8%AA%E6%97%B6%E9%97%B4%EF%BC%8C%E8%AE%A1%E7%AE%97"><span class="toc-text">7)、直接输入两个时间，计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E3%80%81%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%87%BD%E6%95%B0"><span class="toc-text">8)、时间日期格式化函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E5%87%BD%E6%95%B0"><span class="toc-text">4、条件判断函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E5%87%BD%E6%95%B0"><span class="toc-text">5、系统信息函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E5%8A%A0-%E8%A7%A3%E5%AF%86%E5%87%BD%E6%95%B0"><span class="toc-text">6、加&#x2F;解密函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B0"><span class="toc-text">7、其他函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81%E7%BB%BC%E5%90%88%E6%A1%88%E5%88%97-Mysql%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">8、综合案列-Mysql函数的使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84mysql%E5%91%BD%E4%BB%A4"><span class="toc-text">常用的mysql命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql%E4%B9%8Blike%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-text">mysql之like模糊查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">数据表的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-text">1、创建数据表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E4%B8%BB%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-text">1)、主键约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-text">2)、外键约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E9%9D%9E%E7%A9%BA%E7%BA%A6%E6%9D%9F"><span class="toc-text">3)、非空约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E5%94%AF%E4%B8%80%E6%80%A7%E7%BA%A6%E6%9D%9F"><span class="toc-text">4)、唯一性约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E9%BB%98%E8%AE%A4%E7%BA%A6%E6%9D%9F"><span class="toc-text">5)、默认约束</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81%E8%AE%BE%E7%BD%AE%E8%A1%A8%E7%9A%84%E5%B1%9E%E6%80%A7%E8%87%AA%E5%8A%A0"><span class="toc-text">6)、设置表的属性自加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E3%80%81%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">7)、查看表的结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-text">2、修改数据表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E4%BF%AE%E6%94%B9%E8%A1%A8%E5%90%8D"><span class="toc-text">1)、修改表名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2)、修改字段的数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E5%90%8D"><span class="toc-text">3)、修改字段名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E6%B7%BB%E5%8A%A0%E5%AD%97%E6%AE%B5"><span class="toc-text">4)、添加字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E3%80%81%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5"><span class="toc-text">5)、删除字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E3%80%81%E4%BF%AE%E6%94%B9%E5%AD%97%E6%AE%B5%E7%9A%84%E6%8E%92%E5%88%97%E4%BD%8D%E7%BD%AE"><span class="toc-text">6)、修改字段的排列位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E3%80%81%E6%9B%B4%E6%94%B9%E8%A1%A8%E7%9A%84%E5%82%A8%E5%AD%98%E5%BC%95%E6%93%8E"><span class="toc-text">7)、更改表的储存引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E3%80%81%E5%88%A0%E9%99%A4%E8%A1%A8%E7%9A%84%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-text">8)、删除表的外键约束</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E8%A1%A8"><span class="toc-text">3、删除数据表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E5%B0%8F%E7%BB%93"><span class="toc-text">4、综合案例小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">数据的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">插入数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-text">删除数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE"><span class="toc-text">更新数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="toc-text">查询数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql%E6%8E%92%E5%BA%8F"><span class="toc-text">Mysql排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql%E5%88%86%E7%BB%84"><span class="toc-text">Mysql分组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql%E8%BF%9E%E6%8E%A5"><span class="toc-text">Mysql连接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#limit%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">limit的使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL%E4%B8%AD%E6%9F%A5%E8%AF%A2sql%E8%AF%AD%E5%8F%A5%E7%9A%84%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4"><span class="toc-text">MySQL中查询sql语句的运行时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#binary%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">binary关键字</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql%E4%B8%80%E4%BA%9B%E8%AF%AD%E5%8F%A5"><span class="toc-text">Mysql一些语句</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8A%8A%E6%97%B6%E9%97%B4%E6%9B%B4%E6%96%B0%E6%88%90%E4%B8%BA%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><span class="toc-text">1.把时间更新成为当前系统时间</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql%E4%BC%98%E5%8C%96"><span class="toc-text">Mysql优化</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="MySQL基本数据类型"><a href="#MySQL基本数据类型" class="headerlink" title="MySQL基本数据类型"></a>MySQL基本数据类型</h2><p>主要分为数值型，浮点型，日期/时间吗，字符串（字符）型和二进制型。</p>
+<p>unsigned：无符号的，只能是正数。signed：有符号数，可能是正数也可能是负数，浮点数默认是有符号数。</p>
+<h3 id="1-数值型"><a href="#1-数值型" class="headerlink" title="1.数值型"></a>1.数值型</h3><p><img src="https://pic2.zhimg.com/80/v2-69f428d2c084b9ff48108ad5fda13e55_hd.jpg" alt="img"></p>
+<h3 id="2-浮点型"><a href="#2-浮点型" class="headerlink" title="2.浮点型"></a>2.浮点型</h3><p><img src="https://pic1.zhimg.com/80/v2-1a4941e2acc0f8dd4b0f5324085d23e0_hd.png" alt="img"></p>
+<h3 id="3-日期-时间"><a href="#3-日期-时间" class="headerlink" title="3.日期/时间"></a>3.日期/时间</h3><p>  <strong>timestamp</strong>：时间戳类型，就是指一个时间的数据值，本质是一个数字，一个重要作用就是能够自动获得时间戳的数据值。   </p>
+<p><img src="https://pic2.zhimg.com/80/v2-31ef3b71be0a60d79358b5afb10dbef9_hd.jpg" alt="img"></p>
+<h3 id="4-字符型"><a href="#4-字符型" class="headerlink" title="4.字符型"></a>4.字符型</h3><p><strong>varchar</strong> ：变长字符串 使用时必须设定长度，最大值理论值65535个</p>
+<p><strong>char</strong> ：定长字符串，使用时需要设定长度，不设定默认为1，最大理论值255个，适用于存储的数据都是可预见的明确的固定长度的字符，如手机号，身份证号码</p>
+<p><img src="https://pic2.zhimg.com/80/v2-f741e55e0e0ae6c04c7db0b4514b9b89_hd.jpg" alt="img"></p>
+<h3 id="5-二进制类型"><a href="#5-二进制类型" class="headerlink" title="5.二进制类型"></a>5.二进制类型</h3><p><strong>blob类型</strong>：小图片用<strong>blob</strong>类型，最大长度64K，</p>
+<p><strong>mediumblob类型</strong>：大图片使用<strong>mediumblob</strong>，最大是16M</p>
+<p><strong>longblob类型</strong>：最大长度是4G</p>
+<p><img src="https://pic3.zhimg.com/80/v2-47856a610d759ad97ac3a7e7ec44bbee_hd.jpg" alt="img"></p>
+<h3 id="6-特殊类型"><a href="#6-特殊类型" class="headerlink" title="6.特殊类型"></a>6.特殊类型</h3><p>  <strong>enum</strong> （枚举类型）单选项字符串数据类型：只能插入指定的数据格式，否则会报错。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql-&gt; create table user3(id int primary key auto_increment,</span><br><span class="line">     -&gt; name varchar(10),</span><br><span class="line">     -&gt; sex enum(&#x27;boy&#x27;,&#x27;girl&#x27;)</span><br><span class="line">     -&gt; );</span><br><span class="line"></span><br><span class="line">mysql&gt; insert into user3(name,sex)</span><br><span class="line">    -&gt; values</span><br><span class="line">    -&gt; (&quot;zhang&quot;,&quot;boy&quot;),</span><br><span class="line">    -&gt; (&quot;wang&quot;,&quot;girl&quot;);</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from user3;</span><br><span class="line">+----+-------+------+</span><br><span class="line">| id | name  | sex  |</span><br><span class="line">+----+-------+------+</span><br><span class="line">|  1 | zhang | boy  |</span><br><span class="line">|  2 | wang  | girl |</span><br><span class="line">+----+-------+------+</span><br></pre></td></tr></table></figure>
+
+<p><strong>set</strong> （集合类型）多选字符串的数据类型：适用于存储表单界面的多选项值   </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; create table user4(</span><br><span class="line">    -&gt; id int primary key auto_increment,</span><br><span class="line">    -&gt; name varchar(10),</span><br><span class="line">    -&gt; hobby set(&#x27;zhang&#x27;,&#x27;wang&#x27;,&#x27;li&#x27;,&#x27;yang&#x27;)</span><br><span class="line">    -&gt; );</span><br><span class="line">    </span><br><span class="line">mysql&gt; insert into user4(hobby)</span><br><span class="line">    -&gt; values</span><br><span class="line">    -&gt; (&quot;zhang,wang&quot;);</span><br><span class="line">    </span><br><span class="line">mysql&gt; select hobby as 爱好 from user4;</span><br><span class="line">    </span><br><span class="line">+------------+</span><br><span class="line">| 爱好       |</span><br><span class="line">+------------+</span><br><span class="line">| zhang,wang |</span><br><span class="line">+------------+</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何选择数据类型"><a href="#如何选择数据类型" class="headerlink" title="如何选择数据类型"></a>如何选择数据类型</h2><h3 id="1-、整数和浮点数"><a href="#1-、整数和浮点数" class="headerlink" title="1)、整数和浮点数"></a>1)、整数和浮点数</h3><p>如果不需要小数部分，则使用整数来保存数据；</p>
+<p>如果需要表示小数部分，则使用浮点数类型。对于浮点数据列，存入的数值会对该列定义的小数位<strong>进行四舍五入</strong>。 例如，如果列的值的范围为 1-99999, 若使用整数，则MEDIUMINT UNSIGNED 是最好的类型，若需要存储小数，则使用 FLOAT 类型。</p>
+<p>浮点类型包括 FLOAT 和 DOUBLE 类型。DOUBLE 类型精度比 FLOAT 类型高，因此，如要求存储精度较高时，应选择 DOUBLE 类型。</p>
+<h3 id="2-、浮点数和定点数"><a href="#2-、浮点数和定点数" class="headerlink" title="2)、浮点数和定点数"></a>2)、浮点数和定点数</h3><p>浮点数FLOAT、DOUBLE 相对于定点数 DECIMAL 的优势是: <strong>在长度一定的情况下, 浮点数能表示更大的数据范围</strong>，但是由于浮点数容易产生误差。</p>
+<p><strong>因此对精确度要求比较高时，建议使用DECIMAL 来存储</strong>。DECIMAL 在 MySQL 中是以<strong>字符串存储</strong>的，用于定义货币等对精确度要求较高的数据。另外<strong>两个浮点数进行减法和比较运算时也容易出问</strong>题，因此在进行计算的时候，一定要小心。如果进行<strong>数值比较，最好使用 DECIMAL 类型</strong>。</p>
+<h3 id="3-、日期和时间类型"><a href="#3-、日期和时间类型" class="headerlink" title="3)、日期和时间类型"></a>3)、日期和时间类型</h3><p>MySQL 对于不同种类的日期和时间有很多的数据类型，比如 YEAR 和 TIME。如果只需要记录年份，则使用YEAR 类型即可； 如果只记录时间，只需使用TIME 类型。</p>
+<p><strong>如果同时需要记录日期和时间，则可以使用 TIMESTAMP 或者 DATETIME 类型</strong>。由于TIMESTAMP 列的取值范围小于 DATETIME 的取值范围，<strong>因此存储范围较大的日期最好使用DATETIME</strong>。</p>
+<p>TIMESTAMP 也有一个DATETIME 不具备的属性。默认的情况下，当插入一条记录但并没有指定 TIMESTAMP 这个列值时，MySQL 会把 TIMESTAMP 列设为当前的时间。<strong>因此当需要插入记录同时插入当前时间</strong>时，使用TIMESTAMP 是方便的，另外 TIMESTAMP 在空间上比 DATETIME 更有效。</p>
+<h3 id="4-、char和varchar"><a href="#4-、char和varchar" class="headerlink" title="4)、char和varchar"></a>4)、char和varchar</h3><p>char和varchar的区别:</p>
+<ul>
+<li>char是固定长度字符，varchar是可变长度字符；</li>
+<li>CHAR 会自动删除插入数据的尾部空格，VARCHAR 不会删除尾部空格。</li>
+</ul>
+<p>CHAR 是固定长度，<strong>所以它的处理速度比 VARCHAR 的速度要快</strong>，但是它的缺点就是浪费存储空间。所以对存储不大，但在速度上有要求的可以使用 CHAR 类型，反之可以使用VARCHAR 类型来实现。</p>
+<p>存储引擎对于选择 CHAR 和 VARCHAR 的影响:</p>
+<ul>
+<li>对于MYyISAM 存储引擎: 最好使用固定长度(<code>char</code>)的数据列代替可变长度的数据列。这样可以使整个表静态化，从而使数据检索更快，用空间换时间。</li>
+<li>对于 InnoDB 存储引擎: 使用可变长度(<code>varchar</code>)的数据列，因为 InnoDB 数据表的存储格式不分固定长度和可变长度，因此使用 CHAR 不一定比使用 VARCHAR 更好，但由于VARCHAR 是按照实际的长度存储，比较节省空间，所以对磁盘 IO 和数据存储总量比较好。</li>
+</ul>
+<h3 id="5-、ENUM和SET"><a href="#5-、ENUM和SET" class="headerlink" title="5)、ENUM和SET"></a>5)、ENUM和SET</h3><p><strong>ENUM 只能取单值</strong>, 它的数据列表是一个<strong>枚举集合</strong>。它的合法取值列表最多允许有 65 535个成员。因此，在需要从<strong>多个值中选取一个</strong>时，可以使用 ENUM。比如: 性别字段适合定义为 ENUM 类型，每次只能从“男”或“女”中取一个值。</p>
+<p><strong>SET 可取多值</strong>。它的合法取值列表最多允许有 64 个成员。空字符串也是一个合法的 SET值。在需要<strong>取多个值的时候</strong>，适合使用 SET 类型，比如: 要存储一个人兴趣爱好，最好使用SET 类型 。</p>
+<p><strong>ENUM 和 SET 的值是以字符串形式出现的，但在内部，MySQL 以数值的形式存储它们</strong>。</p>
+<h3 id="6-、BLOB和TEXT"><a href="#6-、BLOB和TEXT" class="headerlink" title="6)、BLOB和TEXT"></a>6)、BLOB和TEXT</h3><p><strong>BLOB 是二进制字符串，TEXT 是非二进制字符串</strong>，两者均可存放大容量的信息。BLOB主要存储图片、音频信息等，而 TEXT 只能存储纯文本文件。</p>
+<h2 id="常见运算符介绍"><a href="#常见运算符介绍" class="headerlink" title="常见运算符介绍"></a>常见运算符介绍</h2><h3 id="1-、运算符概述"><a href="#1-、运算符概述" class="headerlink" title="1)、运算符概述"></a>1)、运算符概述</h3><p>总共有四大类: </p>
+<ol>
+<li>算术运算符</li>
+</ol>
+<p>算术运算符用于各类数值运算，包括加 (+) 、减 (-) 、乘 (+) 、除 (/) 、求余(或称模运算，%) 。</p>
+<ol start="2">
+<li>比较运算符</li>
+</ol>
+<p>比较运算符用于比较运算。包括大于 (&gt;) 、小于 (&lt;) 、等于 (=) 、大于等于 (&gt;=) 、小于等于 (&lt;=) 、不等于 (!=) ，以及<code>IN、BETWEEN AND、IS NULL、GREATEST、LEAST、LIKE、REGEXP </code>等。</p>
+<ol start="3">
+<li>逻辑运算符</li>
+</ol>
+<p>逻辑运算符的求值所得结果均为1 (TRUE) 、0 (FALSE) ，这类运算符有逻辑非 (NOT或者!) 、逻辑与 (AND 或者&amp;&amp;) 、逻辑或 (OR 或者|) 、逻辑异或 C(XOR) 。</p>
+<ol start="4">
+<li>位操作运算符</li>
+</ol>
+<p>位操作运算符参与运算的操作数按二进制位进行运算。包括位与(&amp;) 、位或 (|) 、位非(~) 、位异或 (^) 、左移 (&lt;&lt;) 、右移 (&gt;&gt;) 6种。</p>
+<h3 id="2-、算数运算符"><a href="#2-、算数运算符" class="headerlink" title="2)、算数运算符"></a>2)、算数运算符</h3><p>没啥好说的就是<code>+、－、*、/、%</code>。</p>
+<h3 id="3-、比较运算符"><a href="#3-、比较运算符" class="headerlink" title="3)、比较运算符"></a>3)、比较运算符</h3><p>注意一下比较运算符</p>
+<p><img src="D:/programme/CodingNote/Mysql/images/24_比较运算符.png" alt="这里写图片描述"></p>
+<p>数值比较有如下规则:</p>
+<ul>
+<li>若有一个或两个参数为NULL，则比较运算的结果为NULL；</li>
+<li>若同一个比较运算中的两个参数都是字符串，则按照字符串进行比较；</li>
+<li>若两个参数均为整数，则按照整数进行比较；</li>
+<li><strong>若一个字符串和数字进行相等判断，则 MySQL 可以自动将字符串转换为数字</strong>；</li>
+</ul>
+<p><strong>安全等于运算符</strong></p>
+<p>这个操作符和=操作符执行相同的比较操作，不过<code>&lt;=&gt;</code>可以用来判断 NULL 值。在两个操作数均为NULL 时，其返回值为 1 而不为NULL；而当一个操作数为 NULL 时，其返回值为0而不为NULL。</p>
+<p><code>&lt;=&gt;</code>在执行比较操作时和<code>&quot;=&quot;</code>的作用是相似的，唯一的区别是<code>&lt;=&gt;</code>可以来对NULL进行判断，两者都为NULL时返回<code>1</code>。</p>
+<p><strong>不等于运算符<code>&lt;&gt;</code>或者<code>!=</code></strong>:</p>
+<p><code>&quot;&lt;&gt;&quot;</code>或者<code>&quot;!=&quot;</code>用于判断数字、字符串、表达式不相等的判断。如果不相等，返回值为 1； 否则返回值为 0。这两个运算符不能用于判断空值 NULL。</p>
+<p><strong>LEAST运算符</strong></p>
+<p>语法格式为: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LEAST(值 1,值 2…,值m)</span><br></pre></td></tr></table></figure>
+
+<p>其中值 <code>n</code> 表示参数列表中有<code>n</code>个值。在有两个或多个参数的情况下, 返回最小值。假如任意一个自变量为NULL,则<code>LEAST()</code>的返回值为<code>NULL</code>。</p>
+<p><strong>GREATEST</strong></p>
+<p>语法格式：<code>GREATEST(值1, 值2, 值3)</code> ，其中<code>n</code>表示参数列表中有<code>n</code>个值。当有<code>2</code>个或多个参数时，返回为最大值，假如任意一个自变量为NULL，则<code>GREATEST()</code>的返回值为NULL。</p>
+<p><strong>LIKE</strong></p>
+<p><img src="" alt="这里写图片描述"></p>
+<p><strong>正则表达式REGEXP</strong></p>
+<p><img src="" alt="这里写图片描述"></p>
+<p>看一个例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select &#x27;ssky&#x27; regexp &#x27;^s&#x27;,&#x27;ssky&#x27; regexp &#x27;y$&#x27;, &#x27;ssky&#x27; regexp &#x27;.sky&#x27;, &#x27;ssky&#x27; regexp &#x27;[ab]&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>效果</p>
+<p><img src="D:/programme/CodingNote/Mysql/images/25_正则结果.png" alt="这里写图片描述">s</p>
+<h3 id="4-、逻辑运算符"><a href="#4-、逻辑运算符" class="headerlink" title="4)、逻辑运算符"></a>4)、逻辑运算符</h3><p>和高级语言差不多，不赘述。</p>
+<h3 id="5-、位运算"><a href="#5-、位运算" class="headerlink" title="5)、位运算"></a>5)、位运算</h3><p>和高级语言差不多，不赘述。</p>
+<h3 id="6-、运算符优先级"><a href="#6-、运算符优先级" class="headerlink" title="6)、运算符优先级"></a>6)、运算符优先级</h3><p><img src="D:/programme/CodingNote/Mysql/images/28_优先级.png"></p>
+<h1 id="数据库储存引擎"><a href="#数据库储存引擎" class="headerlink" title="数据库储存引擎"></a>数据库储存引擎</h1><h3 id="查看引擎命令"><a href="#查看引擎命令" class="headerlink" title="查看引擎命令"></a>查看引擎命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">show engines; //查看系统所支持的引擎类型:</span><br><span class="line"></span><br><span class="line">show variables like &#x27;%storage_engine&#x27;; //查看mysql引擎</span><br><span class="line"></span><br><span class="line">show create table tablename; //可以查看某个表所使用的引擎</span><br></pre></td></tr></table></figure>
+
+<h3 id="InnoDB引擎"><a href="#InnoDB引擎" class="headerlink" title="InnoDB引擎"></a>InnoDB引擎</h3><p>InnoDB 是事务型数据库的首选引擎，<strong>支持事务安全表 (ACID ) ，支持行锁定和外键。</strong></p>
+<p>InnoDB 作为<strong>默认存储引擎</strong>，特性有:</p>
+<ul>
+<li>InnoDB 给 MySQL 提供了<strong>具有提交、回滚和崩溃恢复能力的事务安全 (ACID 兼容)存储引擎</strong>。InnoDB 锁定在<strong>行级</strong>并且也在 SELECT 语句中提供一个类似 Oracle 的<strong>非锁定读</strong>。这些功能增加了多用户部署和性能。在 SQL 查询中，可以自由地将 <strong>InnoDB 类型的表与其他MySQL 的表的类型混合起来</strong>，甚至在同一个查询中也可以混合。</li>
+<li>InnoDB 是<strong>为处理巨大数据量的最大性能设计</strong>。它的 CPU 效率可能是任何其他基于磁盘的关系数据库引擎所不能匹敌的。</li>
+<li>InnoDB 存储引擎完全与 MySQL 服务器整合，I<strong>nnoDB 存储引擎为在主内存中缓存数据和索引而维持它自己的缓冲池</strong>。InnoDB <strong>将它的表和索引存在一个逻辑表空间中，表空间可以包含数个文件〈或原始磁盘分区) 。</strong>这与 MyISAM 表不同，比如在 <code>MyISAM</code> 表中每个表被存在分离的文件中。InnoDB 表可以是任何尺寸,，即使在文件尺寸被限制为 2GB 的操作系统上。</li>
+<li>InnoDB <strong>支持外键完整性约束 (FOREIGN KEY)</strong> 。存储表中的数据时, 每张表的存储都按主键顺序存放, 如果没有显示在表定义时指定主键，InnoDB 会为每一行生成一个 6B 的ROWID，并以此作为主键。</li>
+<li>InnoDB 被用在众多需要高性能的大型数据库站点上。</li>
+<li>InnoDB 不创建目录，使用 InnoDB 时，MySQL 将在 MySQL 数据目录下创建一个名为<code>ibdata1</code> 的 10MB 大小的自动扩展数据文件，以及两个名为<code> ib_logfile0</code> 和<code>ib_logfilel</code>的 <code>5MB</code>大小的日志文件。</li>
+</ul>
+<h3 id="MyISAM引擎"><a href="#MyISAM引擎" class="headerlink" title="MyISAM引擎"></a>MyISAM引擎</h3><p>MyISAM 基于 ISAM 的存储引擎，并对其进行扩展。它是在 <strong>Web、数据存储</strong>和其他应用<br>环境下最常使用的存储引擎之一。MyISAM 拥有较高的插入、查询速度，<strong>但不支持事务</strong>。在<br>MyISAM 主要特性有:</p>
+<ul>
+<li><strong>大文件</strong> (达 63 位文件长度) 在支持大文件的文件系统和操作系统上被支持。</li>
+<li>当把删除、更新及插入操作混合使用的时候，动态尺寸的行产生更少碎片。这要通过合并相邻被删除的块，以及若下一个块被删除，就扩展到下一块来自动完成。</li>
+<li>每个 MyISAM 表最大索引数是 64，这可以通过重新编译来改变。每个索引最大的列数是 16 个。</li>
+<li>最大的键长度是 1000B，这也可以通过编译来改变。对于键长度超过 250B 的情况，一个超过 1024B 的键将被用上。</li>
+<li><strong>BLOB 和TEXT 列可以被索引</strong>。</li>
+<li><strong>NULL 值被允许在索引的列中。这个值占每个键的 0~1 个字节</strong>。</li>
+<li>所有数字键值以高字节优先被存储以允许一个更高的索引压缩。</li>
+<li>每表一个<code>AUTO_INCREMENT</code> 列的内部处理。MyISAM 为 <code>INSERT</code> 和 <code>UPDATE</code> 操作自动更新这一列。这使得 <code>AUTO_INCREMENT </code>列更快〈至少 10%) 。在序列顶的值被删除之后就不能再利用。</li>
+<li>可以把<strong>数据文件和索引文件</strong>放在不同目录。</li>
+<li>每个字符列可以有不同的字符集。</li>
+<li>有VARCHAR 的表可以固定或动态记录长度。</li>
+<li>VARCHAR 和CHAR 列可以多达 64KB。</li>
+</ul>
+<blockquote>
+<p>使用 MyISAM 引擎创建数据库，将生产 3 个文件。文件的名字以<strong>表的名字</strong>开始，扩展名指出文件类型， <code>frm</code>文件存储表定义，数据文件的扩展名为<code>.MYD (MYData)</code>，索引文件的扩展名是<code>.MYI MYIndex)</code> 。</p>
+</blockquote>
+<h3 id="MEMORY引擎"><a href="#MEMORY引擎" class="headerlink" title="MEMORY引擎"></a>MEMORY引擎</h3><p>MEMORY 存储引擎<strong>将表中的数据存储到内存中，为查询和引用其他表数据提供快速访问</strong>。MEMORY 主要特性有:</p>
+<ul>
+<li>MEMORY 表的每个表可以有多达 32 个索引，每个索引 16 列，以及 500B 的最大键长度。     </li>
+<li>MEMORY 存储引擎执行 <strong>HASH 和 BTREE</strong> 索引。</li>
+<li>可以在一个MEMORY 表中有非唯一键。</li>
+<li>MEMORY 表使用一个固定的记录长度格式。</li>
+<li>MEMORY 不支持BLOB 或TEXT 列。</li>
+<li>MEMORY 支持 <code>AUTO_INCREMENT</code> 列和<strong>对可包含NULL 值的列的索引</strong>。</li>
+<li>MEMORY 表在所有客户端之间共享 (就像其他任何非 TEMPORARY 表) 。</li>
+<li><strong>MEMORY 表内容被存在内存中，内存是 MEMORY 表和服务器在查询处理时的空闲中创建的内部表共享</strong>。</li>
+<li>当不再需要 MEMORY 表的内容时，<strong>要释放被 MEMORY 表使用的内存</strong>，应该执行<code>DELETE FROM</code> 或TRUNCATE TABLE，或者删除整个表 〈使用DROP TABLE) 。</li>
+</ul>
+<h3 id="存储引擎的选择"><a href="#存储引擎的选择" class="headerlink" title="存储引擎的选择"></a>存储引擎的选择</h3><p>不同存储引擎都有各自的特点，以适应不同的需求。下面是各种引擎的不同的功能: </p>
+<ul>
+<li>如果要提供提交、回滚和崩溃恢复能力的<strong>事务安全</strong> (ACID 兼容) 能力，并要求实现<strong>并发控制</strong>，InnoDB 是个很好的选择；</li>
+<li>如果数据表主要用来<strong>插入和查询记录</strong>，则 MyISAM 引擎能提供较<strong>高的处理效率</strong>；</li>
+<li>如果只是<strong>临时存放数据</strong>，数据量不大，并且<strong>不需要较高的数据安全性</strong>，可以选择将<strong>数据保存在内存中</strong>的 Memory 引擎，MySQL 中使用该引擎作为临时表，存放查询的中间结果；</li>
+<li>如果只有 <strong>INSERT 和 SELECT 操作</strong>，可以选择 Archive 引擎，Archive 存储引擎支持高并发的插入操作，但是本身<strong>并不是事务安全</strong>的。Archive 存储引擎非常适合<strong>存储归档数据</strong>，如记录日志信息可以使用 Archive 引擎。</li>
+</ul>
+<p>使用哪一种引擎要根据需要灵活选择, 一个数据库中多个表可以使用不同引擎以满足各种性能和实际需求。使用合适的存储引擎，将会提高整个数据库的性能。</p>
+<h1 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h1><h2 id="B-Tree原理"><a href="#B-Tree原理" class="headerlink" title="B+Tree原理"></a>B+Tree原理</h2><h1 id="Mysql函数"><a href="#Mysql函数" class="headerlink" title="Mysql函数"></a>Mysql函数</h1><h2 id="1、数学函数"><a href="#1、数学函数" class="headerlink" title="1、数学函数"></a>1、数学函数</h2><h3 id="1-、绝对值，π，平方根，去余函数-适用小数"><a href="#1-、绝对值，π，平方根，去余函数-适用小数" class="headerlink" title="1)、绝对值，π，平方根，去余函数(适用小数)"></a>1)、绝对值，π，平方根，去余函数(适用小数)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#绝对值，π，平方根，去余函数(适用小数)</span><br><span class="line">mysql&gt; select abs(-1),pi(),sqrt(9),Mod(31,8),Mod(45.5,6);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+---------+----------+---------+-----------+-------------+</span><br><span class="line">| abs(-1) | pi()     | sqrt(9) | Mod(31,8) | Mod(45.5,6) |</span><br><span class="line">+---------+----------+---------+-----------+-------------+</span><br><span class="line">|       1 | 3.141593 |       3 |         7 |         3.5 |</span><br><span class="line">+---------+----------+---------+-----------+-------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-、获取整数的函数"><a href="#2-、获取整数的函数" class="headerlink" title="2)、获取整数的函数"></a>2)、获取整数的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#获取整数的函数</span><br><span class="line">mysql&gt; select ceil(-3.5),ceiling(3.5),floor(-3.5),floor(3.5);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+------------+--------------+-------------+------------+</span><br><span class="line">| ceil(-3.5) | ceiling(3.5) | floor(-3.5) | floor(3.5) |</span><br><span class="line">+------------+--------------+-------------+------------+</span><br><span class="line">|         -3 |            4 |          -4 |          3 |</span><br><span class="line">+------------+--------------+-------------+------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-、获取随机数的函数"><a href="#3-、获取随机数的函数" class="headerlink" title="3)、获取随机数的函数"></a>3)、获取随机数的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#获取随机数的函数</span><br><span class="line">mysql&gt; select rand(),rand(),rand(10),rand(10);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+--------------------+---------------------+--------------------+--------------------+</span><br><span class="line">| rand()             | rand()              | rand(10)           | rand(10)           |</span><br><span class="line">+--------------------+---------------------+--------------------+--------------------+</span><br><span class="line">| 0.9031498375378082 | 0.46329259729319494 | 0.6570515219653505 | 0.6570515219653505 |</span><br><span class="line">+--------------------+---------------------+--------------------+--------------------+</span><br><span class="line"></span><br><span class="line">可以看到前面两个不同，后面两个指定了种子所以相同。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-、Round函数-四舍五入函数-，truncate-函数"><a href="#4-、Round函数-四舍五入函数-，truncate-函数" class="headerlink" title="4)、Round函数(四舍五入函数)，truncate()函数"></a>4)、Round函数(四舍五入函数)，truncate()函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#Round函数(四舍五入函数)，truncate()函数</span><br><span class="line">mysql&gt; select round(3.4),(3.6),round(3.16,1),round(3.16,0),round(232.28,-1),truncate(1.31,1),truncate(1.99,1),truncate(19.99,-1);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+------------+-----+---------------+---------------+------------------+------------------+------------------+--------------------+</span><br><span class="line">| round(3.4) | 3.6 | round(3.16,1) | round(3.16,0) | round(232.28,-1) | truncate(1.31,1) | truncate(1.99,1) | truncate(19.99,-1) |</span><br><span class="line">+------------+-----+---------------+---------------+------------------+------------------+------------------+--------------------+</span><br><span class="line">|          3 | 3.6 |           3.2 |             3 |              230 |              1.3 |              1.9 |                 10 |</span><br><span class="line">+------------+-----+---------------+---------------+------------------+------------------+------------------+--------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-、符号函数，幂运算函数pow-power-exp"><a href="#5-、符号函数，幂运算函数pow-power-exp" class="headerlink" title="5)、符号函数，幂运算函数pow,power,exp()"></a>5)、符号函数，幂运算函数pow,power,exp()</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#符号函数，幂运算函数pow,power,exp()//e的x乘方</span><br><span class="line">mysql&gt; select sign(-21),sign(0),sign(21),pow(2,2),power(2,-2),exp(2);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-----------+---------+----------+----------+-------------+------------------+</span><br><span class="line">| sign(-21) | sign(0) | sign(21) | pow(2,2) | power(2,-2) | exp(2)           |</span><br><span class="line">+-----------+---------+----------+----------+-------------+------------------+</span><br><span class="line">|        -1 |       0 |        1 |        4 |        0.25 | 7.38905609893065 |</span><br><span class="line">+-----------+---------+----------+----------+-------------+------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-、自然对数运算和以10为底的对数运算，弧度，角度-radians角度转弧度，弧度转角度"><a href="#6-、自然对数运算和以10为底的对数运算，弧度，角度-radians角度转弧度，弧度转角度" class="headerlink" title="6)、自然对数运算和以10为底的对数运算，弧度，角度 radians角度转弧度，弧度转角度"></a>6)、自然对数运算和以10为底的对数运算，弧度，角度 radians角度转弧度，弧度转角度</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#自然对数运算和以10为底的对数运算,弧度，角度 radians角度转弧度，弧度转角度</span><br><span class="line">mysql&gt; select log(3),log(-3),log10(100),log10(-100),radians(180),degrees(pi()/2);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+--------------------+---------+------------+-------------+-------------------+-----------------+</span><br><span class="line">| log(3)             | log(-3) | log10(100) | log10(-100) | radians(180)      | degrees(pi()/2) |</span><br><span class="line">+--------------------+---------+------------+-------------+-------------------+-----------------+</span><br><span class="line">| 1.0986122886681098 |    NULL |          2 |        NULL | 3.141592653589793 |              90 |</span><br><span class="line">+--------------------+---------+------------+-------------+-------------------+-----------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-、正弦函数余弦函数"><a href="#7-、正弦函数余弦函数" class="headerlink" title="7)、正弦函数余弦函数"></a>7)、正弦函数余弦函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#正弦函数余弦函数</span><br><span class="line">mysql&gt; select sin(pi()/2),degrees(asin(1)),cos(pi()),degrees(acos(-1)),round(tan(pi()/4)),degrees(atan(1)),cot(pi()/4);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-------------+------------------+-----------+-------------------+--------------------+------------------+--------------------+</span><br><span class="line">| sin(pi()/2) | degrees(asin(1)) | cos(pi()) | degrees(acos(-1)) | round(tan(pi()/4)) | degrees(atan(1)) | cot(pi()/4)        |</span><br><span class="line">+-------------+------------------+-----------+-------------------+--------------------+------------------+--------------------+</span><br><span class="line">|           1 |               90 |        -1 |               180 |                  1 |               45 | 1.0000000000000002 |</span><br><span class="line">+-------------+------------------+-----------+-------------------+--------------------+------------------+--------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2、字符串函数"><a href="#2、字符串函数" class="headerlink" title="2、字符串函数"></a>2、字符串函数</h2><h3 id="1-、字符串函数、concat-ws忽略空值null"><a href="#1-、字符串函数、concat-ws忽略空值null" class="headerlink" title="1)、字符串函数、concat_ws忽略空值null"></a>1)、字符串函数、concat_ws忽略空值null</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#字符串函数,concat_ws忽略空值null</span><br><span class="line">mysql&gt; select char_length(&#x27;aab&#x27;),length(&#x27;aabb&#x27;),concat(&#x27;My sql &#x27;,&#x27;5.7&#x27;),concat(&#x27;My&#x27;,null,&#x27;sql&#x27;),concat_ws(&#x27;-&#x27;,&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;),concat_ws(&#x27;*&#x27;,&#x27;aa&#x27;,null,&#x27;bb&#x27;);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+--------------------+----------------+-------------------------+-------------------------+----------------------------+-------------------------------+</span><br><span class="line">| char_length(&#x27;aab&#x27;) | length(&#x27;aabb&#x27;) | concat(&#x27;My sql &#x27;,&#x27;5.7&#x27;) | concat(&#x27;My&#x27;,null,&#x27;sql&#x27;) | concat_ws(&#x27;-&#x27;,&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;) | concat_ws(&#x27;*&#x27;,&#x27;aa&#x27;,null,&#x27;bb&#x27;) |</span><br><span class="line">+--------------------+----------------+-------------------------+-------------------------+----------------------------+-------------------------------+</span><br><span class="line">|                  3 |              4 | My sql 5.7              | NULL                    | a-b-c                      | aa*bb                         |</span><br><span class="line">+--------------------+----------------+-------------------------+-------------------------+----------------------------+-------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-、替换字符串的函数"><a href="#2-、替换字符串的函数" class="headerlink" title="2)、替换字符串的函数"></a>2)、替换字符串的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#替换字符串的函数</span><br><span class="line">mysql&gt; select insert(&#x27;Quest&#x27;,2,4,&#x27;What&#x27;) as Coll,insert(&#x27;Quest&#x27;,-1,4,&#x27;What&#x27;) as Coll2,insert(&#x27;Quest&#x27;,3,100,&#x27;Wh&#x27;) as Coll3;</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-------+-------+-------+</span><br><span class="line">| Coll  | Coll2 | Coll3 |</span><br><span class="line">+-------+-------+-------+</span><br><span class="line">| QWhat | Quest | QuWh  |</span><br><span class="line">+-------+-------+-------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-、大小写转换、获取指定长度字符串的函数left-right"><a href="#3-、大小写转换、获取指定长度字符串的函数left-right" class="headerlink" title="3)、大小写转换、获取指定长度字符串的函数left,right"></a>3)、大小写转换、获取指定长度字符串的函数left,right</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#大小写转换,获取指定长度字符串的函数left,right;</span><br><span class="line">mysql&gt; select lower(&#x27;ZHENGXIN&#x27;),lcase(&#x27;ZHENGXIN&#x27;),upper(&#x27;zhengxin&#x27;),ucase(&#x27;zhengxin&#x27;),left(&#x27;football&#x27;,5),right(&#x27;football&#x27;,5);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-------------------+-------------------+-------------------+-------------------+--------------------+---------------------+</span><br><span class="line">| lower(&#x27;ZHENGXIN&#x27;) | lcase(&#x27;ZHENGXIN&#x27;) | upper(&#x27;zhengxin&#x27;) | ucase(&#x27;zhengxin&#x27;) | left(&#x27;football&#x27;,5) | right(&#x27;football&#x27;,5) |</span><br><span class="line">+-------------------+-------------------+-------------------+-------------------+--------------------+---------------------+</span><br><span class="line">| zhengxin          | zhengxin          | ZHENGXIN          | ZHENGXIN          | footb              | tball               |</span><br><span class="line">+-------------------+-------------------+-------------------+-------------------+--------------------+---------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-、填充字符串的函数-删除空格的函数"><a href="#4-、填充字符串的函数-删除空格的函数" class="headerlink" title="4)、填充字符串的函数,删除空格的函数"></a>4)、填充字符串的函数,删除空格的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#填充字符串的函数,删除空格的函数</span><br><span class="line">mysql&gt; select lpad(&#x27;hello&#x27;,4,&#x27;*&#x27;),lpad(&#x27;hello&#x27;,10,&#x27;*&#x27;),</span><br><span class="line">    -&gt; rpad(&#x27;hello&#x27;,10,&#x27;*&#x27;),concat(&#x27;(&#x27;,ltrim(&#x27;   book   &#x27;),&#x27;)&#x27;),</span><br><span class="line">    -&gt; concat(&#x27;(&#x27;,rtrim(&#x27;   book   &#x27;),&#x27;)&#x27;),</span><br><span class="line">    -&gt; concat(&#x27;(&#x27;,trim(&#x27;   book   &#x27;),&#x27;)&#x27;),</span><br><span class="line">    -&gt; trim(&#x27;xy&#x27; from &#x27;xyxyabababxyxy&#x27;);</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+---------------------+----------------------+----------------------+-------------------------------------+-------------------------------------+------------------------------------+----------------------------------+</span><br><span class="line">| lpad(&#x27;hello&#x27;,4,&#x27;*&#x27;) | lpad(&#x27;hello&#x27;,10,&#x27;*&#x27;) | rpad(&#x27;hello&#x27;,10,&#x27;*&#x27;) | concat(&#x27;(&#x27;,ltrim(&#x27;   book   &#x27;),&#x27;)&#x27;) | concat(&#x27;(&#x27;,rtrim(&#x27;   book   &#x27;),&#x27;)&#x27;) | concat(&#x27;(&#x27;,trim(&#x27;   book   &#x27;),&#x27;)&#x27;) | trim(&#x27;xy&#x27; from &#x27;xyxyabababxyxy&#x27;) |</span><br><span class="line">+---------------------+----------------------+----------------------+-------------------------------------+-------------------------------------+------------------------------------+----------------------------------+</span><br><span class="line">| hell                | *****hello           | hello*****           | (book   )                           | (   book)                           | (book)                             | ababab                           |</span><br><span class="line">+---------------------+----------------------+----------------------+-------------------------------------+-------------------------------------+------------------------------------+----------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-、重复生成-空格函数，替换函数，比较大小的函数"><a href="#5-、重复生成-空格函数，替换函数，比较大小的函数" class="headerlink" title="5)、重复生成,空格函数，替换函数，比较大小的函数"></a>5)、重复生成,空格函数，替换函数，比较大小的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#重复生成,空格函数，替换函数，比较大小的函数</span><br><span class="line">mysql&gt; select repeat(&#x27;mysql&#x27;,3),concat(&#x27;(&#x27;,space(6),&#x27;)&#x27;),</span><br><span class="line">    -&gt; replace(&#x27;xxx.baidu.com&#x27;,&#x27;x&#x27;,&#x27;w&#x27;),strcmp(&#x27;abc&#x27;,&#x27;abd&#x27;);</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+-------------------+--------------------------+----------------------------------+---------------------+</span><br><span class="line">| repeat(&#x27;mysql&#x27;,3) | concat(&#x27;(&#x27;,space(6),&#x27;)&#x27;) | replace(&#x27;xxx.baidu.com&#x27;,&#x27;x&#x27;,&#x27;w&#x27;) | strcmp(&#x27;abc&#x27;,&#x27;abd&#x27;) |</span><br><span class="line">+-------------------+--------------------------+----------------------------------+---------------------+</span><br><span class="line">| mysqlmysqlmysql   | (      )                 | www.baidu.com                    |                  -1 |</span><br><span class="line">+-------------------+--------------------------+----------------------------------+---------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-、获取子串的函数"><a href="#6-、获取子串的函数" class="headerlink" title="6)、获取子串的函数"></a>6)、获取子串的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#获取子串的函数</span><br><span class="line">mysql&gt; select substring(&#x27;breakfast&#x27;,5) as coll,</span><br><span class="line">    -&gt; substring(&#x27;breakfast&#x27;,3,5) as coll2,</span><br><span class="line">    -&gt; substring(&#x27;breakfast&#x27;,-3) as coll3, #从后面开始截取3个</span><br><span class="line">    -&gt; substring(&#x27;breakfast&#x27;,-1,4) as coll4; #从结尾开始第一个位置截取四个</span><br><span class="line">   </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+-------+-------+-------+-------+</span><br><span class="line">| coll  | coll2 | coll3 | coll4 |</span><br><span class="line">+-------+-------+-------+-------+</span><br><span class="line">| kfast | eakfa | ast   | t     |</span><br><span class="line">+-------+-------+-------+-------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><font color = crimson>注意还有一个MID函数和substring作用是一样的</font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#匹配字串开始的位置,字符串逆序</span><br><span class="line">mysql&gt; select locate(&#x27;ball&#x27;,&#x27;football&#x27;),position(&#x27;ball&#x27;in&#x27;football&#x27;),</span><br><span class="line">    -&gt; instr(&#x27;football&#x27;,&#x27;ball&#x27;),reverse(&#x27;abc&#x27;);</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+---------------------------+------------------------------+--------------------------+----------------+</span><br><span class="line">| locate(&#x27;ball&#x27;,&#x27;football&#x27;) | position(&#x27;ball&#x27;in&#x27;football&#x27;) | instr(&#x27;football&#x27;,&#x27;ball&#x27;) | reverse(&#x27;abc&#x27;) |</span><br><span class="line">+---------------------------+------------------------------+--------------------------+----------------+</span><br><span class="line">|                         5 |                            5 |                        5 | cba            |</span><br><span class="line">+---------------------------+------------------------------+--------------------------+----------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-、返回指定位置的值，返回指定字符串的位置的函数"><a href="#7-、返回指定位置的值，返回指定字符串的位置的函数" class="headerlink" title="7)、返回指定位置的值，返回指定字符串的位置的函数"></a>7)、返回指定位置的值，返回指定字符串的位置的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#返回指定位置的值,返回指定字符串的位置的函数</span><br><span class="line">mysql&gt; select elt(3,&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;),elt(2,&#x27;a&#x27;),</span><br><span class="line">    -&gt; field(&#x27;Hi&#x27;,&#x27;hihi&#x27;,&#x27;Hey&#x27;,&#x27;Hi&#x27;,&#x27;bas&#x27;) as coll,</span><br><span class="line">    -&gt; field(&#x27;Hi&#x27;,&#x27;hihi&#x27;,&#x27;a&#x27;,&#x27;b&#x27;) as coll2,</span><br><span class="line">    -&gt; find_in_set(&#x27;Hi&#x27;,&#x27;hihi,Hey,Hi,bas&#x27;); #返回字串位置的函数</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+--------------------+------------+------+-------+-------------------------------------+</span><br><span class="line">| elt(3,&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;) | elt(2,&#x27;a&#x27;) | coll | coll2 | find_in_set(&#x27;Hi&#x27;,&#x27;hihi,Hey,Hi,bas&#x27;) |</span><br><span class="line">+--------------------+------------+------+-------+-------------------------------------+</span><br><span class="line">| c                  | NULL       |    3 |     0 |                                   3 |</span><br><span class="line">+--------------------+------------+------+-------+-------------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="8-、make-set-函数的使用"><a href="#8-、make-set-函数的使用" class="headerlink" title="8)、make_set()函数的使用"></a>8)、make_set()函数的使用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#make_set()函数的使用</span><br><span class="line">mysql&gt; select make_set(1,&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;) as coll,#0001选第一个</span><br><span class="line">    -&gt; make_set(1|4, &#x27;hello&#x27;,&#x27;nice&#x27;,&#x27;word&#x27;) as coll2, #0001 0100--&gt;0101 --&gt;选第一和第三</span><br><span class="line">    -&gt; make_set(1|4,&#x27;hello&#x27;,&#x27;nice&#x27;,null,&#x27;word&#x27;) as coll3,#0001 0100--&gt;0101 --&gt;选第一和第三</span><br><span class="line">    -&gt; make_set(0,&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;) as coll4; </span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line">  </span><br><span class="line">+------+------------+-------+-------+</span><br><span class="line">| coll | coll2      | coll3 | coll4 |</span><br><span class="line">+------+------------+-------+-------+</span><br><span class="line">| a    | hello,word | hello |       |</span><br><span class="line">+------+------------+-------+-------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="3、日期和时间函数"><a href="#3、日期和时间函数" class="headerlink" title="3、日期和时间函数"></a>3、日期和时间函数</h2><h3 id="1-、获取日期时间函数"><a href="#1-、获取日期时间函数" class="headerlink" title="1)、获取日期时间函数"></a>1)、获取日期时间函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#获取日期时间函数</span><br><span class="line">mysql&gt; select current_date(),curdate(),curdate()+0,</span><br><span class="line">    -&gt; current_time(),curtime(),curtime()+0,</span><br><span class="line">    -&gt; current_timestamp(),localtime(),now(),sysdate();</span><br><span class="line"> </span><br><span class="line">效果:</span><br><span class="line"> </span><br><span class="line">+----------------+------------+-------------+----------------+-----------+-------------+---------------------+---------------------+---------------------+---------------------+</span><br><span class="line">| current_date() | curdate()  | curdate()+0 | current_time() | curtime() | curtime()+0 | current_timestamp() | localtime()         | now()               | sysdate()           |</span><br><span class="line">+----------------+------------+-------------+----------------+-----------+-------------+---------------------+---------------------+---------------------+---------------------+</span><br><span class="line">| 2019-02-25     | 2019-02-25 |    20190225 | 10:40:22       | 10:40:22  |      104022 | 2019-02-25 10:40:22 | 2019-02-25 10:40:22 | 2019-02-25 10:40:22 | 2019-02-25 10:40:22 |</span><br><span class="line">+----------------+------------+-------------+----------------+-----------+-------------+---------------------+---------------------+---------------------+---------------------+s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-、获取时间的数字，根据时间获取日期-互为反函数"><a href="#2-、获取时间的数字，根据时间获取日期-互为反函数" class="headerlink" title="2)、获取时间的数字，根据时间获取日期(互为反函数)"></a>2)、获取时间的数字，根据时间获取日期(互为反函数)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#获取时间的数字,根据时间获取日期(互为反函数)</span><br><span class="line">mysql&gt; select unix_timestamp(),unix_timestamp(now()),now(),</span><br><span class="line">    -&gt; from_unixtime(1523689758);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+------------------+-----------------------+---------------------+---------------------------+</span><br><span class="line">| unix_timestamp() | unix_timestamp(now()) | now()               | from_unixtime(1523689758) |</span><br><span class="line">+------------------+-----------------------+---------------------+---------------------------+</span><br><span class="line">|       1551062468 |            1551062468 | 2019-02-25 10:41:08 | 2018-04-14 15:09:18       |</span><br><span class="line">+------------------+-----------------------+---------------------+---------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-、返回当前时区日期和时间的函数，日期月份时间函数"><a href="#3-、返回当前时区日期和时间的函数，日期月份时间函数" class="headerlink" title="3)、返回当前时区日期和时间的函数，日期月份时间函数"></a>3)、返回当前时区日期和时间的函数，日期月份时间函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#返回当前时区日期和时间的函数,日期月份时间函数</span><br><span class="line">mysql&gt; select utc_time(),utc_time()+0,</span><br><span class="line">    -&gt; utc_date(),utc_date()+0,</span><br><span class="line">    -&gt; month(&#x27;2016-03-04&#x27;),monthname(&#x27;2016-03-04&#x27;),</span><br><span class="line">    -&gt; dayname(&#x27;2018-04-14&#x27;),dayofweek(&#x27;2018-04-14&#x27;),</span><br><span class="line">    -&gt; weekday(&#x27;2018-04-14&#x27;);</span><br><span class="line">   </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+------------+--------------+------------+--------------+---------------------+-------------------------+-----------------------+-------------------------+-----------------------+</span><br><span class="line">| utc_time() | utc_time()+0 | utc_date() | utc_date()+0 | month(&#x27;2016-03-04&#x27;) | monthname(&#x27;2016-03-04&#x27;) | dayname(&#x27;2018-04-14&#x27;) | dayofweek(&#x27;2018-04-14&#x27;) | weekday(&#x27;2018-04-14&#x27;) |</span><br><span class="line">+------------+--------------+------------+--------------+---------------------+-------------------------+-----------------------+-------------------------+-----------------------+</span><br><span class="line">| 02:41:56   |        24156 | 2019-02-25 |     20190225 |                   3 | March                   | Saturday              |                       7 |                     5 |</span><br><span class="line">+------------+--------------+------------+--------------+---------------------+-------------------------+-----------------------+-------------------------+-----------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意dayofweek和weekday的差别：</p>
+<ul>
+<li><code>DAYOFWEEK(d)</code>函数返回d对应的一周中的索引(位置)。1表示周日，2表示周一，….，7表示周六；</li>
+<li><code>WEEKDAY(d)</code>返回d对应的工作日索引。0表示周一，1表示周二，…，6表示周日；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#返回是这一年的第几周</span><br><span class="line">mysql&gt; select week(&#x27;2018-4-16&#x27;),#默认0表示第一天从周末开始</span><br><span class="line">    -&gt; week(&#x27;2018-04-16&#x27;,1), #周一#返回是这一年的第几周</span><br><span class="line">    -&gt; dayofyear(&#x27;2018-4-16&#x27;),dayofmonth(&#x27;2018-4-14&#x27;), #返回一年中的第几天</span><br><span class="line">    -&gt; year(&#x27;2018-4-14&#x27;),quarter(&#x27;2018-4-14&#x27;),</span><br><span class="line">    -&gt; minute(&#x27;10:10:02&#x27;),second(&quot;10:10:02&quot;);</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-------------------+----------------------+------------------------+-------------------------+-------------------+----------------------+--------------------+--------------------+</span><br><span class="line">| week(&#x27;2018-4-16&#x27;) | week(&#x27;2018-04-16&#x27;,1) | dayofyear(&#x27;2018-4-16&#x27;) | dayofmonth(&#x27;2018-4-14&#x27;) | year(&#x27;2018-4-14&#x27;) | quarter(&#x27;2018-4-14&#x27;) | minute(&#x27;10:10:02&#x27;) | second(&quot;10:10:02&quot;) |</span><br><span class="line">+-------------------+----------------------+------------------------+-------------------------+-------------------+----------------------+--------------------+--------------------+</span><br><span class="line">|                15 |                   16 |                    106 |                      14 |              2018 |                    2 |                 10 |                  2 |</span><br><span class="line">+-------------------+----------------------+------------------------+-------------------------+-------------------+----------------------+--------------------+--------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-、获取指定日期的指定值的函数"><a href="#4-、获取指定日期的指定值的函数" class="headerlink" title="4)、获取指定日期的指定值的函数"></a>4)、获取指定日期的指定值的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#获取指定日期的指定值的函数</span><br><span class="line">mysql&gt; select extract(year from &#x27;2018-07-06&#x27;) as coll,</span><br><span class="line">    -&gt; extract(year_month from &#x27;2018-08-06&#x27;) as coll2,</span><br><span class="line">    -&gt; extract(day_minute from &#x27;2018-07-06 10:11:05&#x27;) as coll3;</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+------+--------+-------+</span><br><span class="line">| coll | coll2  | coll3 |</span><br><span class="line">+------+--------+-------+</span><br><span class="line">| 2018 | 201808 | 61011 |</span><br><span class="line">+------+--------+-------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-、时间和秒钟转换的函数"><a href="#5-、时间和秒钟转换的函数" class="headerlink" title="5)、时间和秒钟转换的函数"></a>5)、时间和秒钟转换的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#时间和秒钟转换的函数</span><br><span class="line">mysql&gt; select time_to_sec(&#x27;01:00:40&#x27;),</span><br><span class="line">    -&gt; sec_to_time(3600);</span><br><span class="line">    </span><br><span class="line">效果:    </span><br><span class="line"></span><br><span class="line">+-------------------------+-------------------+</span><br><span class="line">| time_to_sec(&#x27;01:00:40&#x27;) | sec_to_time(3600) |</span><br><span class="line">+-------------------------+-------------------+</span><br><span class="line">|                    3640 | 01:00:00          |</span><br><span class="line">+-------------------------+-------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-、计算日期和时间的函数"><a href="#6-、计算日期和时间的函数" class="headerlink" title="6)、计算日期和时间的函数"></a>6)、计算日期和时间的函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#计算日期和时间的函数</span><br><span class="line">mysql&gt; select date_add(&#x27;2010-12-31 23:59:59&#x27;,interval 1 second) as coll,</span><br><span class="line">    -&gt; adddate(&#x27;2010-12-31 23:59:59&#x27;,interval 1 second) as coll2,</span><br><span class="line">    -&gt; date_add(&#x27;2010-12-31 23:59:59&#x27;,interval &#x27;0:0:1&#x27; hour_second) as coll3, #后面的hour_second要看表决定</span><br><span class="line">    -&gt; date_sub(&#x27;2011-01-02&#x27;,interval 31 day) as coll4,</span><br><span class="line">    -&gt; subdate(&#x27;2011-01-02&#x27;,interval 31 day) as coll5,</span><br><span class="line">    -&gt; date_sub(&#x27;2011-01-02 00:01:00&#x27;,interval &#x27;0 0:1:1&#x27; day_second) as coll6; #对应位置的相减</span><br><span class="line">   </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+---------------------+---------------------+---------------------+------------+------------+---------------------+</span><br><span class="line">| coll                | coll2               | coll3               | coll4      | coll5      | coll6               |</span><br><span class="line">+---------------------+---------------------+---------------------+------------+------------+---------------------+</span><br><span class="line">| 2011-01-01 00:00:00 | 2011-01-01 00:00:00 | 2011-01-01 00:00:00 | 2010-12-02 | 2010-12-02 | 2011-01-01 23:59:59 |</span><br><span class="line">+---------------------+---------------------+---------------------+------------+------------+---------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-、直接输入两个时间，计算"><a href="#7-、直接输入两个时间，计算" class="headerlink" title="7)、直接输入两个时间，计算"></a>7)、直接输入两个时间，计算</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#直接输入两个时间，计算</span><br><span class="line">mysql&gt; select addtime(&#x27;2000-12-31 23:59:59&#x27;,&#x27;1:1:1&#x27;) as coll,</span><br><span class="line">    -&gt; subtime(&#x27;2000-12-31 23:59:59&#x27;,&#x27;1:1:1&#x27;)as coll2,</span><br><span class="line">    -&gt; datediff(&#x27;2000-12-28&#x27;,&#x27;2001-01-03&#x27;) as coll3; #前面的减后面的</span><br><span class="line">+---------------------+---------------------+-------+</span><br><span class="line">| coll                | coll2               | coll3 |</span><br><span class="line">+---------------------+---------------------+-------+</span><br><span class="line">| 2001-01-01 01:01:00 | 2000-12-31 22:58:58 |    -6 |</span><br><span class="line">+---------------------+---------------------+-------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意日期的一些区别:</p>
+<p><img src="https://img-blog.csdn.net/20180414174815850?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+<p>日期和时间格式化的函数</p>
+<p><img src="https://img-blog.csdn.net/2018041417493265?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="https://img-blog.csdn.net/20180414174940784?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"><br><img src="https://img-blog.csdn.net/20180414174950614?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p4enh6eDAxMTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+<h3 id="8-、时间日期格式化函数"><a href="#8-、时间日期格式化函数" class="headerlink" title="8)、时间日期格式化函数"></a>8)、时间日期格式化函数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#时间日期格式化函数</span><br><span class="line">mysql&gt; select date_format(&#x27;1997-10-04 22:23:00&#x27;,&#x27;%W %M %Y&#x27;) as coll,</span><br><span class="line">    -&gt; date_format(&#x27;1997-10-04 22:23:00&#x27;,&#x27;%D %y %a %d %m %b %j&#x27;),</span><br><span class="line">    -&gt; time_format(&#x27;16:00:00&#x27;,&#x27;%H %k %h %I %l&#x27;),</span><br><span class="line">    -&gt; date_format(&#x27;2000-10-05 22:23:00&#x27;,get_format(date,&#x27;USA&#x27;));</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-----------------------+-----------------------------------------------------------+------------------------------------------+-----------------------------------------------------------+</span><br><span class="line">| coll                  | date_format(&#x27;1997-10-04 22:23:00&#x27;,&#x27;%D %y %a %d %m %b %j&#x27;) | time_format(&#x27;16:00:00&#x27;,&#x27;%H %k %h %I %l&#x27;) | date_format(&#x27;2000-10-05 22:23:00&#x27;,get_format(date,&#x27;USA&#x27;)) |</span><br><span class="line">+-----------------------+-----------------------------------------------------------+------------------------------------------+-----------------------------------------------------------+</span><br><span class="line">| Saturday October 1997 | 4th 97 Sat 04 10 Oct 277                                  | 16 16 04 04 4                            | 10.05.2000                                                |</span><br><span class="line">+-----------------------+-----------------------------------------------------------+------------------------------------------+-----------------------------------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="4、条件判断函数"><a href="#4、条件判断函数" class="headerlink" title="4、条件判断函数"></a>4、条件判断函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#条件约束函数</span><br><span class="line">mysql&gt; select if(1&gt;2,2,3),</span><br><span class="line">    -&gt; ifNull(null,10),ifNull(1/0,100),</span><br><span class="line">    -&gt; case 2 when 1 then &#x27;one&#x27; when 2 then &#x27;two&#x27; when 3 then &#x27;three&#x27; else &#x27;more&#x27; end, #2等于后面的2返回后面的then</span><br><span class="line">    -&gt; case when 1&gt;2 then &#x27;a&#x27; else &#x27;b&#x27; end;</span><br><span class="line">    </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+-------------+-----------------+-----------------+--------------------------------------------------------------------------------+-------------------------------------+</span><br><span class="line">| if(1&gt;2,2,3) | ifNull(null,10) | ifNull(1/0,100) | case 2 when 1 then &#x27;one&#x27; when 2 then &#x27;two&#x27; when 3 then &#x27;three&#x27; else &#x27;more&#x27; end | case when 1&gt;2 then &#x27;a&#x27; else &#x27;b&#x27; end |</span><br><span class="line">+-------------+-----------------+-----------------+--------------------------------------------------------------------------------+-------------------------------------+</span><br><span class="line">|           3 |              10 |        100.0000 | two                                                                            | b                                   |</span><br><span class="line">+-------------+-----------------+-----------------+--------------------------------------------------------------------------------+-------------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5、系统信息函数"><a href="#5、系统信息函数" class="headerlink" title="5、系统信息函数"></a>5、系统信息函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#系统信息函数</span><br><span class="line">mysql&gt; show processlist;#输出当前用户的连接信息</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+----+------+-----------+------------+---------+------+----------+------------------+</span><br><span class="line">| Id | User | Host      | db         | Command | Time | State    | Info             |</span><br><span class="line">+----+------+-----------+------------+---------+------+----------+------------------+</span><br><span class="line">|  2 | root | localhost | learnmysql | Query   |    0 | starting | show processlist |</span><br><span class="line">+----+------+-----------+------------+---------+------+----------+------------------+</span><br><span class="line">1 row in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#获取字符串的字符集和排列方式的函数</span><br><span class="line">mysql&gt; select charset(&#x27;abc&#x27;),charset(convert(&#x27;abc&#x27; using latin1)),</span><br><span class="line">    -&gt; charset(version()), #获取字符集</span><br><span class="line">    -&gt; collation(&#x27;abc&#x27;),collation(convert(&#x27;abc&#x27; using utf8));#获取排列方式</span><br><span class="line">    </span><br><span class="line">效果:    </span><br><span class="line"></span><br><span class="line">+----------------+--------------------------------------+--------------------+------------------+--------------------------------------+</span><br><span class="line">| charset(&#x27;abc&#x27;) | charset(convert(&#x27;abc&#x27; using latin1)) | charset(version()) | collation(&#x27;abc&#x27;) | collation(convert(&#x27;abc&#x27; using utf8)) |</span><br><span class="line">+----------------+--------------------------------------+--------------------+------------------+--------------------------------------+</span><br><span class="line">| utf8           | latin1                               | utf8               | utf8_general_ci  | utf8_general_ci                      |</span><br><span class="line">+----------------+--------------------------------------+--------------------+------------------+--------------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>还要注意Last_insert_id最后自动生成的ID值。</p>
+<h2 id="6、加-解密函数"><a href="#6、加-解密函数" class="headerlink" title="6、加/解密函数"></a>6、加/解密函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select password(&#x27;newpwd&#x27;),MD5(&#x27;mypwd&#x27;), </span><br><span class="line">    -&gt; encode(&#x27;secret&#x27;,&#x27;cry&#x27;),length(encode(&#x27;secret&#x27;,&#x27;cry&#x27;)),</span><br><span class="line">    -&gt; decode(encode(&#x27;secret&#x27;,&#x27;cry&#x27;),&#x27;cry&#x27;);#加密后解密</span><br><span class="line">   </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+-------------------------------------------+----------------------------------+------------------------+--------------------------------+--------------------------------------+</span><br><span class="line">| password(&#x27;newpwd&#x27;)                        | MD5(&#x27;mypwd&#x27;)                     | encode(&#x27;secret&#x27;,&#x27;cry&#x27;) | length(encode(&#x27;secret&#x27;,&#x27;cry&#x27;)) | decode(encode(&#x27;secret&#x27;,&#x27;cry&#x27;),&#x27;cry&#x27;) |</span><br><span class="line">+-------------------------------------------+----------------------------------+------------------------+--------------------------------+--------------------------------------+</span><br><span class="line">| *1FA85AA204CC12B39B20E8F1E839D11B3F9E6AA4 | 318bcb4be908d0da6448a0db76908d78 | �h��                     |                              6 | secret                               |</span><br><span class="line">+-------------------------------------------+----------------------------------+------------------------+--------------------------------+--------------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="7、其他函数"><a href="#7、其他函数" class="headerlink" title="7、其他函数"></a>7、其他函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select format(123.1234,2),format(123.1,3),format(123.123,0),#格式化函数</span><br><span class="line">    -&gt; #不同进制数之间的转换</span><br><span class="line">    -&gt; conv(&#x27;a&#x27;,16,2),conv(15,10,2),conv(15,10,8),conv(15,10,16);</span><br><span class="line">    </span><br><span class="line">效果:   </span><br><span class="line"> </span><br><span class="line">+--------------------+-----------------+-------------------+----------------+---------------+---------------+----------------+</span><br><span class="line">| format(123.1234,2) | format(123.1,3) | format(123.123,0) | conv(&#x27;a&#x27;,16,2) | conv(15,10,2) | conv(15,10,8) | conv(15,10,16) |</span><br><span class="line">+--------------------+-----------------+-------------------+----------------+---------------+---------------+----------------+</span><br><span class="line">| 123.12             | 123.100         | 123               | 1010           | 1111          | 17            | F              |</span><br><span class="line">+--------------------+-----------------+-------------------+----------------+---------------+---------------+----------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#IP地址与数字相互转换的函数</span><br><span class="line">mysql&gt; select inet_aton(&#x27;209.207.224.40&#x27;),inet_ntoa(3520061480),</span><br><span class="line">    -&gt; #枷锁函数和解锁函数</span><br><span class="line">    -&gt; get_lock(&#x27;lock1&#x27;,10),#这个锁持续10秒</span><br><span class="line">    -&gt; is_used_lock(&#x27;lock1&#x27;),  #返回当前连接ID</span><br><span class="line">    -&gt; is_free_lock(&#x27;lock1&#x27;), #是否是可用的</span><br><span class="line">    -&gt; release_lock(&#x27;lock1&#x27;);</span><br><span class="line"></span><br><span class="line">效果:</span><br><span class="line"></span><br><span class="line">+-----------------------------+-----------------------+----------------------+-----------------------+-----------------------+-----------------------+</span><br><span class="line">| inet_aton(&#x27;209.207.224.40&#x27;) | inet_ntoa(3520061480) | get_lock(&#x27;lock1&#x27;,10) | is_used_lock(&#x27;lock1&#x27;) | is_free_lock(&#x27;lock1&#x27;) | release_lock(&#x27;lock1&#x27;) |</span><br><span class="line">+-----------------------------+-----------------------+----------------------+-----------------------+-----------------------+-----------------------+</span><br><span class="line">|                  3520061480 | 209.207.224.40        |                    1 |                     2 |                     0 |                     1 |</span><br><span class="line">+-----------------------------+-----------------------+----------------------+-----------------------+-----------------------+-----------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#重复执行指定操作的函数</span><br><span class="line">mysql&gt; select benchmark(5000,password(&#x27;newpad&#x27;)),</span><br><span class="line">    -&gt; charset(&#x27;abc&#x27;),charset(convert(&#x27;abc&#x27; using latin1)),#改变字符集的函数</span><br><span class="line">    -&gt; cast(100 as char(2)),convert(&#x27;2010-10-11 12:12:12&#x27;,time);#改变数据类型的函数</span><br><span class="line">  </span><br><span class="line">效果:</span><br><span class="line">    </span><br><span class="line">+------------------------------------+----------------+--------------------------------------+----------------------+-------------------------------------+</span><br><span class="line">| benchmark(5000,password(&#x27;newpad&#x27;)) | charset(&#x27;abc&#x27;) | charset(convert(&#x27;abc&#x27; using latin1)) | cast(100 as char(2)) | convert(&#x27;2010-10-11 12:12:12&#x27;,time) |</span><br><span class="line">+------------------------------------+----------------+--------------------------------------+----------------------+-------------------------------------+</span><br><span class="line">|                                  0 | utf8           | latin1                               | 10                   | 12:12:12                            |</span><br><span class="line">+------------------------------------+----------------+--------------------------------------+----------------------+-------------------------------------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="8、综合案列-Mysql函数的使用"><a href="#8、综合案列-Mysql函数的使用" class="headerlink" title="8、综合案列-Mysql函数的使用"></a>8、综合案列-Mysql函数的使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">select round(rand() * 10),round(rand() * 10),round(rand() * 10);#产生三个1-10之间的随机数</span><br><span class="line">select pi(),sin(pi()),cos(0),round(tan(pi()/4)),floor(cot(pi()/4));</span><br><span class="line"></span><br><span class="line">create database test_db3;</span><br><span class="line">use test_db3;</span><br><span class="line">show tables;</span><br><span class="line">create table member</span><br><span class="line">(</span><br><span class="line">	m_id int(11) primary key auto_increment,</span><br><span class="line">	m_FN varchar(15),</span><br><span class="line">	m_LN varchar(15),</span><br><span class="line">	m_brith datetime,</span><br><span class="line">	m_info varchar(15) null</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">insert into member values(null,&#x27;Halen&#x27;,&#x27;Park&#x27;,&#x27;1970-06-29&#x27;,&#x27;GoodMan&#x27;);</span><br><span class="line"></span><br><span class="line">select length(m_FN),#返回m_FN的长度</span><br><span class="line">concat(m_FN,m_LN),#返回第一条记录中的全名</span><br><span class="line">lower(m_info),#将m_info转换成小写</span><br><span class="line">reverse(m_info) from member;</span><br><span class="line"></span><br><span class="line">select year(curdate())-year(m_brith) as age,#计算年龄</span><br><span class="line">dayofyear(m_brith) as days,</span><br><span class="line">date_format(m_brith,&#x27;%W %D %M %Y&#x27;) as birthDate from member;</span><br><span class="line"></span><br><span class="line">insert into member values(null,&#x27;Samuel&#x27;,&#x27;Green&#x27;,now(),null);</span><br><span class="line"></span><br><span class="line">select last_insert_id(); #输出最后插入的自增的编号</span><br><span class="line"></span><br><span class="line">select m_brith,case when year(m_brith) &lt; 2000 then &#x27;old&#x27; </span><br><span class="line">when year(m_brith) &gt; 2000 then &#x27;young&#x27; </span><br><span class="line">else &#x27;not born&#x27; end as status from member;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="常用的mysql命令"><a href="#常用的mysql命令" class="headerlink" title="常用的mysql命令"></a>常用的mysql命令</h1><p><code>mysql -u root -p</code>  进入root账户中</p>
+<p><code>show create database test_db</code>查看已经创建的数据库的定义</p>
+<p><code>show databases</code>显示所有的数据库</p>
+<p><code>drop database test_db</code>删除数据库</p>
+<p><code>use databasename</code>使用某个数据库</p>
+<p><code>show tables</code>看本数据库中有多少张表</p>
+<p><code>describe tablename</code>查看表结构  ==<code>desc tablename</code></p>
+<p><code>show create table tablename</code>查看建表语句</p>
+<p><code>select * from tablename</code>查看表数据</p>
+<h1 id="mysql之like模糊查询"><a href="#mysql之like模糊查询" class="headerlink" title="mysql之like模糊查询"></a>mysql之like模糊查询</h1><p><strong>%：表示任意个字符，可以是0个或多个，可匹配任意类型和长度的字符。</strong></p>
+<p><strong>_：表示单个字符，常用来限制表达式的字符长度。</strong></p>
+<p>1.<strong>like ‘%国%’</strong> 查询所有含国字的记录  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student where name like &#x27;%国%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>2.**like ‘%国%’ and like ‘%飞%’**查询既有国字又有飞字的记录,国字和飞字不分先后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student where name like &#x27;%国%&#x27;and name like &#x27;%飞%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>3.**like ‘%国%飞%’**查询既有国字又有飞字的记录，国字必须在前，飞字必须在后。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student where name like &#x27;%国%飞%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>4.**like ‘张__’**查询姓张的记录，张后面有两横杠，所以必须是三个字的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student where name like &#x27;张__&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>5..**like ‘%张__%’**查询姓张的记录，可以是两个字的也可以是三个字的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from student where name like &#x27;%张__%&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据表的基本操作"><a href="#数据表的基本操作" class="headerlink" title="数据表的基本操作"></a>数据表的基本操作</h1><h2 id="1、创建数据表"><a href="#1、创建数据表" class="headerlink" title="1、创建数据表"></a>1、创建数据表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">use test_db;</span><br><span class="line">create table tb_emp1</span><br><span class="line">(</span><br><span class="line">	id int(11),</span><br><span class="line">	name varchar(15),</span><br><span class="line">	deptID int(11),</span><br><span class="line">	salary 	float</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>使用下面语句查看此数据库存在的表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-、主键约束"><a href="#1-、主键约束" class="headerlink" title="1)、主键约束"></a>1)、主键约束</h3><blockquote>
+<p>主键，又称主码，是表中<strong>一列或多列的组合</strong>。主键约束〈Primary Key Constraint) 要求<strong>主键列的数据唯一，并且不允许为空<code>!= null</code><strong>。主键能够唯一地标识表中的一条记录，可以结合外键</strong>来定义不同数据表之间的关系</strong>， 并且可以加快数据库查询的速度。主键和记录之间的关系如同身份证和人之间的关系，它们之间是一一对应的。主键分为两种类型: <strong>单字段主键和多字段联合主键。</strong></p>
+</blockquote>
+<ul>
+<li>单字段主键；</li>
+<li>在定义完所有列之后定义主键；</li>
+<li>多字段联合主键；</li>
+</ul>
+<p>单字段约束: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table tb_emp2</span><br><span class="line">(</span><br><span class="line">	id int(11) primary key,</span><br><span class="line">	name varchar(15),</span><br><span class="line">	deptID int(11),</span><br><span class="line">	salary 	float</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>后面约束: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">create table tb_emp3</span><br><span class="line">(</span><br><span class="line">	id int(11),</span><br><span class="line">	name varchar(15),</span><br><span class="line">	deptID int(11),</span><br><span class="line">	salary 	float,</span><br><span class="line">	primary key(id)</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>联合约束：假设没有主键<code>id</code>，可以通过<code>name</code>和<code>deptID</code>来确定一个唯一的员工。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">create table tb_emp4</span><br><span class="line">(</span><br><span class="line">	id int(11),</span><br><span class="line">	name varchar(15),</span><br><span class="line">	deptID int(11),</span><br><span class="line">	salary 	float,</span><br><span class="line">	primary key(name,deptID)</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-、外键约束"><a href="#2-、外键约束" class="headerlink" title="2)、外键约束"></a>2)、外键约束</h3><ul>
+<li>外键用来在两个表的数据之间建立链接， 它可以是一列或者多列。一个表可以有一个或多个外键。<strong>外键对应的是参照完整性</strong>，一个表的外键可以为空值，<strong>若不为空值，则每一个外键值必须等于另一个表中主键的某个值。</strong></li>
+<li>外键 : 首先它是表中的一个字段，<strong>它可以不是本表的主键，但对应另外一个表的主键。外键主要作用是保证数据引用的完整性， 定义外键后</strong>，不允许删除在另一个表中具有关联关系的行。外键的作用是保持数据的一致性、完整性。例如，部门表 <code>tb_dept </code>的主键是<code>id</code>，在员工表<code>tb_emp5</code>中有一个键 <code>deptId</code> 与这个<code> id</code> 关联。</li>
+</ul>
+<p>有关主表和从表:</p>
+<ul>
+<li>主表(父表) : 对于两个具有关联关系的表而言，相关联字段中<strong>主键所在的那个表</strong>即是主表。</li>
+<li>从表(子表) : 对于两个具有关联关系的表而言，相关联字段中<strong>外键所在的那个表</strong>即是从表。</li>
+</ul>
+<p>需要注意: </p>
+<ul>
+<li>子表的外键必须要关联父表的<strong>主键</strong>；</li>
+<li><strong>相关联的数据类型必须匹配</strong>；</li>
+<li><strong>先删子表，再删父表</strong>；</li>
+</ul>
+<p>下面的例子**tb_emp5(员工表)中的deptID关联部门表中的ID(主键)**：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//父表</span><br><span class="line">create table tb_dept1</span><br><span class="line">(</span><br><span class="line">	id int(11)primary key,</span><br><span class="line">	name varchar(22) not null,</span><br><span class="line">	location varchar(50)</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//子表</span><br><span class="line">create table tb_emp5</span><br><span class="line">(</span><br><span class="line">	id int(11) primary key,</span><br><span class="line">	name varchar(25),</span><br><span class="line">	deptID int(11),</span><br><span class="line">	salary float,</span><br><span class="line">	constraint fk_emp5_dept foreign key(deptID) references tb_dept1(id)</span><br><span class="line">)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-、非空约束"><a href="#3-、非空约束" class="headerlink" title="3)、非空约束"></a>3)、非空约束</h3><p>非空约束指定的字段不能为空，如果添加数据的时候没有指定值，会报错。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table tb_emp6</span><br><span class="line">(</span><br><span class="line">	id int(11) primary key,</span><br><span class="line">	name varchar(15) not null,</span><br><span class="line">	deptID int(11),</span><br><span class="line">	salary 	float</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-、唯一性约束"><a href="#4-、唯一性约束" class="headerlink" title="4)、唯一性约束"></a>4)、唯一性约束</h3><ul>
+<li>唯一性要求该列唯一；</li>
+<li><strong>允许为空，但只能出现一个空值；</strong></li>
+<li>唯一性可以确保一列或几列不出现重复值；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table tb_dept2</span><br><span class="line">(</span><br><span class="line">	id int(11)primary key,</span><br><span class="line">	name varchar(22) unique,</span><br><span class="line">	location varchar(50)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table tb_dept3</span><br><span class="line">(</span><br><span class="line">	id int(11)primary key,</span><br><span class="line">	name varchar(22),</span><br><span class="line">	location varchar(50),</span><br><span class="line">	constraint N_uq unique(name)  #N_uq是约束名</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意<code>UNIQUE</code>和主键约束(<code>PRIMARY KEY </code>)的区别:</strong> </p>
+<ul>
+<li>一个表中可以有多个字段声明为<code>UNIQUE</code>，但只能有一个<code>PRIMARY KEY</code> 声明;</li>
+<li>声明为 <code>PRIMAY KEY</code> 的列不允许有空值，但是声明为 <code>UNIQUE</code>的字段允许空值 (NULL) 的存在。</li>
+</ul>
+<h3 id="5-、默认约束"><a href="#5-、默认约束" class="headerlink" title="5)、默认约束"></a>5)、默认约束</h3><p>指定了默认约束之后，如果没有指定值，就用默认的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table tb_emp7</span><br><span class="line">(</span><br><span class="line">	id int(11) primary key,</span><br><span class="line">	name varchar(15) not null,</span><br><span class="line">	deptID int(11) default 111,</span><br><span class="line">	salary 	float</span><br><span class="line">); </span><br></pre></td></tr></table></figure>
+
+<h3 id="6-、设置表的属性自加"><a href="#6-、设置表的属性自加" class="headerlink" title="6)、设置表的属性自加"></a>6)、设置表的属性自加</h3><ul>
+<li>在数据库应用中，经常希望在每次插入新记录时，系统自动生成字段的主键值。可以通过为表主键添加<code>AUTO_INCREMENT</code> 关键字来实现。</li>
+<li>默认的，在MySQL 中 <code>AUTO _INCREMENT</code>的初始值是 1，每新增一条记录，字段值自动加 1。</li>
+<li><strong>一个表只能有一个字段使用AUTO_INCREMENT 约束，且该字段必须为主键的一部分。</strong></li>
+<li><code>AUTO_INCREMENT </code>约束的字段可以是任何整数类型 (TINYINT、SMALLIN、INT、BIGINT 等) 。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table user</span><br><span class="line">(</span><br><span class="line">	id int(11) primary key auto_increment,</span><br><span class="line">	name varchar(15) not null,</span><br><span class="line">	mail varchar(15) not null,</span><br><span class="line">); </span><br></pre></td></tr></table></figure>
+
+<h3 id="7-、查看表的结构"><a href="#7-、查看表的结构" class="headerlink" title="7)、查看表的结构"></a>7)、查看表的结构</h3><p><code>desc</code>可以查看表的字段名，数据类型，是否为主键，是否默认值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc tb_emp8;</span><br></pre></td></tr></table></figure>
+
+<p>查看表的详细结构，可以看储存引擎，和字符编码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table tb_emp8;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、修改数据表"><a href="#2、修改数据表" class="headerlink" title="2、修改数据表"></a>2、修改数据表</h2><h3 id="1-、修改表名"><a href="#1-、修改表名" class="headerlink" title="1)、修改表名"></a>1)、修改表名</h3><p>将表<code>tb_dept3</code>改为<code>tb_deptment3</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table tb_dept3 rename tb_deptment3;</span><br></pre></td></tr></table></figure>
+
+<p>查看数据库中的表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+
+<p>修改表名不会改变结构，<code>desc</code>前后结果一样。</p>
+<h3 id="2-、修改字段的数据类型"><a href="#2-、修改字段的数据类型" class="headerlink" title="2)、修改字段的数据类型"></a>2)、修改字段的数据类型</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 修改表字段的数据类型,把name列的数据类型改为varchar(33)</span><br><span class="line">alter table tb_dept1 modify name varchar(33);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-、修改字段名"><a href="#3-、修改字段名" class="headerlink" title="3)、修改字段名"></a>3)、修改字段名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 修改表的字段名,不改数据类型 将tb_dept1中的location字段改成loc</span><br><span class="line">alter table tb_dept1 change location loc varchar(50);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 修改表的字段名,并且改变数据类型, 同时改变数据类型</span><br><span class="line">alter table tb_dept1 change loc location varchar(60);</span><br></pre></td></tr></table></figure>
+
+<p><code>change</code>也可以只改变数据类型，但是一般不要<strong>轻易改变数据类型</strong>。</p>
+<h3 id="4-、添加字段"><a href="#4-、添加字段" class="headerlink" title="4)、添加字段"></a>4)、添加字段</h3><p>有三种添加方式:</p>
+<ul>
+<li>①默认在最后面添加；</li>
+<li>②在第一个位置添加<code>first</code>；</li>
+<li>③和指定的位置添加<code>after</code>；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 添加字段(默认在最后面添加)</span><br><span class="line">alter table tb_dept1 add managerID int(10);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 添加字段(默认在最后面添加)(非空约束)</span><br><span class="line">alter table tb_dept1 add column1 int(10) not null;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 添加字段(在第一个位置添加)</span><br><span class="line">alter table tb_dept1 add column2 int(10) first;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 添加字段(在指定位置后面添加)</span><br><span class="line">alter table tb_dept1 add column3 int(10) after name;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-、删除字段"><a href="#5-、删除字段" class="headerlink" title="5)、删除字段"></a>5)、删除字段</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 删除字段, 删除tb_dept1的column3字段</span><br><span class="line">alter table tb_dept1 drop column3;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-、修改字段的排列位置"><a href="#6-、修改字段的排列位置" class="headerlink" title="6)、修改字段的排列位置"></a>6)、修改字段的排列位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 修改字段的排列位置(改到第一个位置)</span><br><span class="line">alter table tb_dept1 modify column1 int(10) first;</span><br><span class="line"># 修改字段的位置为指定的位置</span><br><span class="line">alter table tb_dept1 modify column2 int(10) after name;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-、更改表的储存引擎"><a href="#7-、更改表的储存引擎" class="headerlink" title="7)、更改表的储存引擎"></a>7)、更改表的储存引擎</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 查看数据表的定义</span><br><span class="line">show create table tb_deptment3;</span><br><span class="line"># 更改数据表的引擎</span><br><span class="line">alter table tb_deptment3 engine = MyISAM;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-、删除表的外键约束"><a href="#8-、删除表的外键约束" class="headerlink" title="8)、删除表的外键约束"></a>8)、删除表的外键约束</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">create table tb_emp9</span><br><span class="line">(</span><br><span class="line">	id int(11)primary key,</span><br><span class="line">	deptID int(11),</span><br><span class="line">	name varchar(25),</span><br><span class="line">	salary float,</span><br><span class="line">	constraint fk_emp9_dept foreign key(deptID) references tb_dept1(id)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 删除外键约束</span><br><span class="line">alter table tb_emp9 drop foreign key fk_emp9_dept;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3、删除数据表"><a href="#3、删除数据表" class="headerlink" title="3、删除数据表"></a>3、删除数据表</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 删除表</span><br><span class="line">drop table if exists tb_emp9;</span><br></pre></td></tr></table></figure>
+
+<p>注意注意: <strong>删除有关联的数据表的父表的时候，先删除外键再删除父表</strong></p>
+<h2 id="4、综合案例小结"><a href="#4、综合案例小结" class="headerlink" title="4、综合案例小结"></a>4、综合案例小结</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">create database company;</span><br><span class="line">use company;</span><br><span class="line">create table offices</span><br><span class="line">(</span><br><span class="line">	officeCode int(10) primary key not null unique,</span><br><span class="line">	city varchar(50) not null,</span><br><span class="line">	address varchar(50),</span><br><span class="line">	country varchar(50) not null,</span><br><span class="line">	postalCode varchar(15) unique</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">create table employees</span><br><span class="line">(</span><br><span class="line">	employeeNumber int(11) primary key not null unique auto_increment,</span><br><span class="line">	lastName varchar(50) not null,</span><br><span class="line">	firstName varchar(50) not null,</span><br><span class="line">	mobile varchar(25) unique,</span><br><span class="line">	officeCode int(10) not null,</span><br><span class="line">	jobTitle varchar(50) not null,</span><br><span class="line">	birth datetime not null,</span><br><span class="line">	note varchar(255),</span><br><span class="line">	sex varchar(5)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">show tables;</span><br><span class="line">desc employees;</span><br><span class="line"></span><br><span class="line">#将mobile字段修改到officeCode后面</span><br><span class="line">alter table employees modify mobile varchar(25) after officeCode;</span><br><span class="line">#将birth的字段名改为employee_birth</span><br><span class="line">alter table employees change birth employee_birth datetime;</span><br><span class="line">#修改sex字段为char(1)类型，非空约束</span><br><span class="line">alter table employees modify sex char(1) not null;</span><br><span class="line">#删除字段note </span><br><span class="line">alter table employees drop note;</span><br><span class="line">#增加字段名</span><br><span class="line">alter table employees add favoriate_activity varchar(100);</span><br><span class="line"></span><br><span class="line">#为employee增加一个外键</span><br><span class="line">alter table employees add constraint fk_em_off foreign key(officeCode) references offices(officeCode);</span><br><span class="line"></span><br><span class="line">#删除表的外键约束</span><br><span class="line">alter table employees drop foreign key fk_em_off;</span><br><span class="line"></span><br><span class="line">#更改employee的数据引擎</span><br><span class="line">alter table employees engine = MyISAM;</span><br><span class="line"></span><br><span class="line">#更改employee的表名</span><br><span class="line">alter table employees rename employees_info;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="数据的基本操作"><a href="#数据的基本操作" class="headerlink" title="数据的基本操作"></a>数据的基本操作</h1><h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">insert into tablename(column1,column2) </span><br><span class="line">values</span><br><span class="line">(&quot;values1&quot;,&quot;values2&quot;);//指定列插入一条数据</span><br><span class="line"></span><br><span class="line">insert into tablename</span><br><span class="line">values</span><br><span class="line">(&quot;values1&quot;,&quot;values2&quot;);//全部列插入一条数据</span><br><span class="line"></span><br><span class="line">insert into tablename(column1,column2) </span><br><span class="line">values</span><br><span class="line">(&quot;values1&quot;,&quot;values2&quot;),</span><br><span class="line">(&quot;values1&quot;,&quot;values2&quot;),</span><br><span class="line">......;//插入多条数据</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">delete from tablename;//删除某个表的全部数据</span><br><span class="line"></span><br><span class="line">delete from tablename where cause;//删除指定条件的数据</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update tablename set field1=new-values1，field2=new-values2</span><br><span class="line">[where cause]</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select field1,field2 from tablename where [条件]</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Mysql排序"><a href="#Mysql排序" class="headerlink" title="Mysql排序"></a>Mysql排序</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT field1, field2,...fieldN FROM table_name1, table_name2...</span><br><span class="line">ORDER BY field1, [field2...] [ASC [DESC]]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>你可以使用任何字段来作为排序的条件，从而返回排序后的查询结果。</li>
+<li>你可以设定多个字段来排序。</li>
+<li>你可以使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升排列。</li>
+<li>你可以添加 WHERE…LIKE 子句来设置条件。</li>
+</ul>
+<h1 id="Mysql分组"><a href="#Mysql分组" class="headerlink" title="Mysql分组"></a>Mysql分组</h1><p>GROUP BY 语句根据一个或多个列对结果集进行分组。</p>
+<p>在分组的列上我们可以使用 COUNT, SUM, AVG,等函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT column_name, function(column_name)</span><br><span class="line">FROM table_name</span><br><span class="line">WHERE column_name operator value</span><br><span class="line">GROUP BY column_name;</span><br></pre></td></tr></table></figure>
+
+<p><strong>WITH ROLLUP</strong>：在group分组字段的基础上再进行统计数据</p>
+<h1 id="Mysql连接"><a href="#Mysql连接" class="headerlink" title="Mysql连接"></a>Mysql连接</h1><p>JOIN 按照功能大致分为如下三类：</p>
+<ul>
+<li><p><strong>INNER JOIN（内连接,或等值连接）</strong>：获取两个表中字段匹配关系的记录。</p>
+</li>
+<li><p><strong>LEFT JOIN（左连接）：</strong>获取左表所有记录，即使右表没有对应匹配的记录。</p>
+</li>
+<li><p><strong>RIGHT JOIN（右连接）：</strong> 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。</p>
+<p>例子如下：两张表结构如下</p>
+<p><img src="https://i.loli.net/2021/04/04/pZri4Tx2GqdtJ1h.png" alt="image-20210404171818636"></p>
+<p><img src="https://i.loli.net/2021/04/04/EHTNS6Lu57RFsCe.png" alt="image-20210404171841167"></p>
+</li>
+</ul>
+<p>内连接：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT boy.hid,boy.bname,girl.gname FROM boy INNER JOIN girl ON girl.hid = boy.hid;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/04/04/GaIUHSBZm4yzMv3.png" alt="image-20210404172007337"></p>
+<p>左连接：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT boy.hid,boy.bname,girl.gname FROM boy LEFT JOIN girl ON girl.hid = boy.hid;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/04/04/FZ7EodUcP2Swavb.png" alt="image-20210404172040334"></p>
+<p>右连接：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT boy.hid,boy.bname,girl.gname FROM boy RIGHT JOIN girl ON girl.hid = boy.hid;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/04/04/fmaB3jucoyK12AI.png" alt="image-20210404172121106"></p>
+<h1 id="limit的使用"><a href="#limit的使用" class="headerlink" title="limit的使用"></a>limit的使用</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select * from tablename limit m,n;//m表示从第几天开始记录数据，n代表记录多少条数据</span><br><span class="line"></span><br><span class="line">select * from tablename limit 0,5;//表示从第一条开始记录数据，取出第一到第五的数据</span><br><span class="line"></span><br><span class="line">select * from tablename limit 5,5;//表示取出第六条到第十条的数据，取出五条数据</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">select * from tablename limit m,n;//表示跳过m条数据，然后记录n条数据</span><br><span class="line">select * from tablename limit m offset n;//表示跳过n条记录，然后记录m条数据</span><br></pre></td></tr></table></figure>
+
+<h1 id="MySQL中查询sql语句的运行时间"><a href="#MySQL中查询sql语句的运行时间" class="headerlink" title="MySQL中查询sql语句的运行时间"></a>MySQL中查询sql语句的运行时间</h1><p>查看执行时间步骤：</p>
+<p>1.show profiles；</p>
+<p><img src="https://pic3.zhimg.com/80/v2-ee3a18b44f4e3112bda21dc773ab1e89_hd.png" alt="img"></p>
+<p>2.show variables;查看 profiling是否是on状态；</p>
+<p><img src="https://pic3.zhimg.com/80/v2-6697898dfae233109e8d534efa6cba6f_hd.png" alt="img"></p>
+<p>3.如果是off，执行命令 set profiling=1；</p>
+<p><img src="https://pic3.zhimg.com/80/v2-d26f91041c15a3a6ec9239f126049d6d_hd.png" alt="img"></p>
+<p>4.执行sql语句</p>
+<p><img src="https://pic2.zhimg.com/80/v2-3650f039fb99145b00ae6f27860e5b97_hd.png" alt="img"></p>
+<p>5.show profiles；然后就可以看到sql语句的执行时间了</p>
+<p><img src="https://pic3.zhimg.com/80/v2-950606152bfea79eee46eafd280a138f_hd.png" alt="img"></p>
+<h1 id="binary关键字"><a href="#binary关键字" class="headerlink" title="binary关键字"></a>binary关键字</h1><p>binary：mysql的where子句的字符串比较是不区分大小学的，可以使用binary关键字来设定where子句的字符串比较是区分大小写的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//区分大小写，zhang和ZHANG是不一样的</span><br><span class="line">select * from student where binary name=&quot;zhang&quot;;</span><br><span class="line"></span><br><span class="line">//不区分大小写，zhang和ZHANG是一样的</span><br><span class="line">select * from student where name=&quot;zhang&quot;; </span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Mysql一些语句"><a href="#Mysql一些语句" class="headerlink" title="Mysql一些语句"></a>Mysql一些语句</h1><h2 id="1-把时间更新成为当前系统时间"><a href="#1-把时间更新成为当前系统时间" class="headerlink" title="1.把时间更新成为当前系统时间"></a>1.把时间更新成为当前系统时间</h2><p><code>update tablename SET Date=Now() where 条件；</code></p>
+<h1 id="Mysql优化"><a href="#Mysql优化" class="headerlink" title="Mysql优化"></a>Mysql优化</h1>
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>

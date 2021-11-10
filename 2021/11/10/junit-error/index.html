@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>junit-error | Hexo</title>
+  <meta name="keywords" content=" junit ">
+  <meta name="description" content="junit-error | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Java">
+<meta property="og:url" content="http://example.com/Java/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-09T14:08:59.000Z">
+<meta property="article:modified_time" content="2021-11-09T14:08:59.467Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/zhangdanan"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/35cb7bd5a133"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/feng-pei-ban-de-xia-tian"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="email"
+               href="mailto:2491152384@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=2491152384&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="All">All
+            
+                <small>(40)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                <li>
+                    <div data-rel="工具">
+                        
+                        工具
+                        <small>(12)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端">
+                        
+                        前端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="后端">
+                        
+                        后端
+                        <small>(7)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="数据库">
+                        
+                        数据库
+                        <small>(9)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="其他">
+                        
+                        其他
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="中间件">
+                        
+                        中间件
+                        <small>(3)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">About</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">Friends</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="40">
+<input type="hidden" id="yelog_site_word_count" value="76.3k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>chrome插件</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>english</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>evernote</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>html</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>idea</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>json</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>junit</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JWT</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>markdown</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>maven</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mq</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mysql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>navicat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>redis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>servlet</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>yarn</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/linkedList/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="LinkedList">LinkedList</span>
+            <span class="post-date" title="2021-11-09 21:18:23">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/HashMap/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="HashMap">HashMap</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/sql%E4%BC%98%E5%8C%96/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="sql优化">sql优化</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/redis-error/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis-error">redis-error</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/redis/"
+           data-tag="redis"
+           data-author="" >
+            <span class="post-title" title="redis">redis</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/Navicat%E8%BF%9E%E6%8E%A5%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%9D%A2%E7%9A%84mysql/"
+           data-tag="mysql,navicat"
+           data-author="" >
+            <span class="post-title" title="Navicat连接阿里云服务器上面的mysql">Navicat连接阿里云服务器上面的mysql</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql%E9%A2%98%E7%9B%AE/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql的一些题目">Mysql的一些题目</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql-error/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql-error">Mysql-error</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/mysql/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql基础知识">Mysql基础知识</span>
+            <span class="post-date" title="2021-11-10 15:16:32">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/yarn/"
+           data-tag="yarn"
+           data-author="" >
+            <span class="post-title" title="yarn">yarn</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/vue-error/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="vue-error">vue-error</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/json/"
+           data-tag="json"
+           data-author="" >
+            <span class="post-title" title="json">json</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/html/"
+           data-tag="html"
+           data-author="" >
+            <span class="post-title" title="html">html</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/10/CentOS%207%E4%B8%8B%E5%90%AF%E5%8A%A8%E3%80%81%E5%85%B3%E9%97%AD%E3%80%81%E9%87%8D%E5%90%AF%E3%80%81%E6%9F%A5%E7%9C%8BMySQL%E6%9C%8D%E5%8A%A1/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="CentOS 7下启动、关闭、重启、查看MySQL服务">CentOS 7下启动、关闭、重启、查看MySQL服务</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/nginx/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="Nginx">Nginx</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/Maven/"
+           data-tag="maven"
+           data-author="" >
+            <span class="post-title" title="maven">maven</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/markdown/"
+           data-tag="markdown"
+           data-author="" >
+            <span class="post-title" title="markdown">markdown</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85jdk8.0/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux系统安装jdk8.0">Linux系统安装jdk8.0</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux%E5%A4%A7%E5%85%A8/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux大全">Linux大全</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/linux/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux">Linux</span>
+            <span class="post-date" title="2021-11-10 15:16:13">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/Linux%EF%BC%88CentOS7%EF%BC%89%E5%AE%89%E8%A3%85Nginx%EF%BC%88%E9%99%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%EF%BC%89/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="Linux（CentOS7）安装Nginx（附简单配置）">Linux（CentOS7）安装Nginx（附简单配置）</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/junit-error/"
+           data-tag="junit"
+           data-author="" >
+            <span class="post-title" title="junit-error">junit-error</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 前端 "
+           href="/2021/11/10/junit/"
+           data-tag="junit"
+           data-author="" >
+            <span class="post-title" title="junit">junit</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/idea/"
+           data-tag="idea"
+           data-author="" >
+            <span class="post-title" title="idea">idea</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/git-error/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git-error">git-error</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/git/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="git">git</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/evernote/"
+           data-tag="evernote"
+           data-author="" >
+            <span class="post-title" title="Evernote">Evernote</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 其他 "
+           href="/2021/11/10/english/"
+           data-tag="english"
+           data-author="" >
+            <span class="post-title" title="english">english</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 工具 "
+           href="/2021/11/10/docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker">docker</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 其他 "
+           href="/2021/11/10/Chrome%E6%8F%92%E4%BB%B6/"
+           data-tag="chrome插件"
+           data-author="" >
+            <span class="post-title" title="chrome插件">chrome插件</span>
+            <span class="post-date" title="2021-11-10 15:16:12">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/JWT/"
+           data-tag="JWT"
+           data-author="" >
+            <span class="post-title" title="JWT">JWT</span>
+            <span class="post-date" title="2021-11-10 14:55:48">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/servlet/"
+           data-tag="servlet"
+           data-author="" >
+            <span class="post-title" title="Servlet">Servlet</span>
+            <span class="post-date" title="2021-11-10 14:55:46">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 中间件 "
+           href="/2021/11/10/RocketMq/"
+           data-tag="mq"
+           data-author="" >
+            <span class="post-title" title="RocketMQ">RocketMQ</span>
+            <span class="post-date" title="2021-11-10 14:55:41">2021/11/10</span>
+        </a>
+        
+        <a id="top" class="All 后端 "
+           href="/2021/11/09/ArrayList/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="ArrayList">ArrayList</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a id="top" class="All 数据库 "
+           href="/2021/11/09/Mysql%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag="mysql"
+           data-author="" >
+            <span class="post-title" title="Mysql">Mysql</span>
+            <span class="post-date" title="2021-11-09 20:52:34">2021/11/09</span>
+        </a>
+        
+        <a  class="All 前端 "
+           href="/2021/11/10/%E5%89%8D%E7%AB%AF%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="前端常用办法">前端常用办法</span>
+            <span class="post-date" title="2021-11-10 15:16:23">2021/11/10</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(GC%E7%AE%97%E6%B3%95%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM算法">JVM算法</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM类的加载机制">JVM类的加载机制</span>
+            <span class="post-date" title="2021-11-09 21:18:37">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM学习路线">JVM学习路线</span>
+            <span class="post-date" title="2021-11-09 21:18:28">2021/11/09</span>
+        </a>
+        
+        <a  class="All 后端 "
+           href="/2021/11/09/JVM(jvm%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84)/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="JVM内存结构">JVM内存结构</span>
+            <span class="post-date" title="2021-11-09 21:18:26">2021/11/09</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-junit-error" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">junit-error</h1>
+    
+    <div class="article-meta">
+        
+        <span class="top"><a>置顶</a></span>
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="前端">前端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">junit</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2021-11-10 17:46:00'>2021-11-10 15:16</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>Count:286</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2019-4-27-junit-error"><span class="toc-text">2019-4-27-junit-error</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#junit-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%8A%A5%E9%94%99%EF%BC%9Ajava-lang-NoClassDefFoundError-org-hamcrest-SelfDescribing"><span class="toc-text">junit 单元测试报错：java.lang.NoClassDefFoundError: org&#x2F;hamcrest&#x2F;SelfDescribing</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E5%A6%82%E4%B8%8B%E5%9B%BE%EF%BC%9A"><span class="toc-text">错误如下图：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">解决方法如下：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2019-4-27-junit-error"><a href="#2019-4-27-junit-error" class="headerlink" title="2019-4-27-junit-error"></a>2019-4-27-junit-error</h1><h3 id="junit-单元测试报错：java-lang-NoClassDefFoundError-org-hamcrest-SelfDescribing"><a href="#junit-单元测试报错：java-lang-NoClassDefFoundError-org-hamcrest-SelfDescribing" class="headerlink" title="junit 单元测试报错：java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing"></a>junit 单元测试报错：java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing</h3><h5 id="错误如下图："><a href="#错误如下图：" class="headerlink" title="错误如下图："></a>错误如下图：</h5><p><img src="https://github.com/aaaxma/JavaNote/blob/master/images/junit.png" alt="Image"></p>
+<h5 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h5><p> 今天在写代码的时候想把老系统里面加上单元测试，所以用最近做的springmvc上的一个项目中的junit扒一个下来：junit-4.12.jar 但是很奇怪在原来系统中好好能运行的，放到现在的项目中就老是报错：java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing。</p>
+<p>疯掉了后来查发现有人说换一个低版本的就行了，引入junit4.10.jar。果然行了，但是我们要知其然更要只其所以然 </p>
+<blockquote>
+<p>查官网：JUnit now uses the latest version of Hamcrest. Thus, you can use all the available matchers and benefit from an improved assertThat which will now print the mismatch description from the matcher when an assertion fails.</p>
+<p>unit.jar: Includes the Hamcrest classes. The simple all-in-one solution to get started quickly.<strong>Starting with version 4.11, Hamcrest is no longer included in this jar</strong>.<br>junit-dep.jar: Only includes the JUnit classes but not Hamcrest. Lets you use a different Hamcrest version.</p>
+</blockquote>
+<p>注意加粗的部分意思是4.11以上版本不在包含hamcrest。<br>所以现在有两个办法解决：</p>
+<ol>
+<li>junit版本降到4.10</li>
+<li>导入hamcrest-core-1.3.jar</li>
+</ol>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>Help us with donation</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">alipay</label></span><span><label><input type="radio" name="pay" value="weixin">weixin</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
