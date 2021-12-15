@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2021/12/15/test/"/>
+      <url>/2021/12/15/test/</url>
+      
+        <content type="html"><![CDATA[<h1 id="This-is-test"><a href="#This-is-test" class="headerlink" title="This is test"></a>This is test</h1><p><img src="https://gitee.com/zhangdanana/img/raw/master//img/14.jpg" alt="14"><img src="https://gitee.com/zhangdanana/img/raw/master//img/13.jpg" alt="13"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JVM-JVM类的加载机制</title>
       <link href="/2021/12/14/JVM-JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/"/>
       <url>/2021/12/14/JVM-JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/</url>
@@ -160,7 +185,7 @@
       <link href="/2020/10/21/Typora+Picgo%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD/"/>
       <url>/2020/10/21/Typora+Picgo%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%8A%9F%E8%83%BD/</url>
       
-        <content type="html"><![CDATA[<p><img src="https://gitee.com/zhangdanana/image/raw/master/img/9.jpg" alt="9"></p><p><img src="https://gitee.com/zhangdanana/image/raw/master/img/10.jpg" alt="10"></p><p>对于经常写文章的人来说，图片上传是个很让人头疼的问题，现在的很多图库都不能使用了，现在用typora自带的图片上传功能来尝试一下</p><p>步骤为偏好设置 &gt;&gt; 下载或更新&gt;&gt;打开配置文件 &gt;&gt;验证图片上传</p><p><img src="https://i.loli.net/2020/10/21/AZxoqXRgdDQ5k4I.png" alt="image-20201021204721559"></p><p>下载完成后，去sm<a href="https://sm.ms/%E6%B3%A8%E5%86%8C%E4%B8%AA%E8%B4%A6%E5%8F%B7%EF%BC%8C%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BA%91%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E6%B3%A8%E5%86%8C%E9%80%81%E4%BD%A0%E5%85%8D%E8%B4%B95G%E7%9A%84%E5%AE%B9%E9%87%8F%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%AE%8C%E8%B4%A6%E5%8F%B7%E5%90%8E%EF%BC%8C%E7%82%B9%E5%87%BB%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%8C%E4%BC%9A%E8%B9%A6%E5%87%BA%E6%9D%A5%E4%B8%80%E4%B8%AAconfig.json%E6%96%87%E4%BB%B6%EF%BC%8C%E6%8A%8A%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%A4%8D%E5%88%B6%E8%BF%9B%E5%8E%BB%EF%BC%8C%E7%84%B6%E5%90%8E%E6%94%B9%E4%B8%8Btoken%EF%BC%8C">https://sm.ms/注册个账号，这是一个云存储服务器，注册送你免费5G的容量，注册完账号后，点击打开配置文件，会蹦出来一个config.json文件，把下面的复制进去，然后改下token，</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;picBed&quot;: &#123;</span><br><span class="line">    &quot;uploader&quot;: &quot;smms&quot;, // 代表当前的默认上传图床为 SM.MS,</span><br><span class="line">    &quot;smms&quot;: &#123;</span><br><span class="line">      &quot;token&quot;: &quot;自己生成的token&quot; //一定要换</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;picgoPlugins&quot;: &#123;&#125; // 为插件预留</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>token是在<a href="https://sm.ms/%E7%BD%91%E7%AB%99%E9%87%8C%E9%9D%A2%E7%94%9F%E6%88%90%E7%9A%84%EF%BC%8C%E7%82%B9%E5%87%BBgenerate">https://sm.ms/网站里面生成的，点击generate</a> secret token就能生成一个新的token</p><p><img src="https://i.loli.net/2020/10/21/NYXhtZQnE8p9zxM.png" alt="image-20201021205605421"></p><p>配置好以后点击验证图片上传选项，显示成功上传图片并获得新的url就是配置成功了</p><p><img src="https://i.loli.net/2020/10/21/JYoLlO9nxpPt7rN.png" alt="image-20201021205839673"></p>]]></content>
+        <content type="html"><![CDATA[<p>对于经常写文章的人来说，图片上传是个很让人头疼的问题，现在的很多图库都不能使用了，现在用typora自带的图片上传功能来尝试一下</p><p>步骤为偏好设置 &gt;&gt; 下载或更新&gt;&gt;打开配置文件 &gt;&gt;验证图片上传</p><p><img src="https://i.loli.net/2020/10/21/AZxoqXRgdDQ5k4I.png" alt="image-20201021204721559"></p><p>下载完成后，去sm<a href="https://sm.ms/%E6%B3%A8%E5%86%8C%E4%B8%AA%E8%B4%A6%E5%8F%B7%EF%BC%8C%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BA%91%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E6%B3%A8%E5%86%8C%E9%80%81%E4%BD%A0%E5%85%8D%E8%B4%B95G%E7%9A%84%E5%AE%B9%E9%87%8F%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%AE%8C%E8%B4%A6%E5%8F%B7%E5%90%8E%EF%BC%8C%E7%82%B9%E5%87%BB%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%EF%BC%8C%E4%BC%9A%E8%B9%A6%E5%87%BA%E6%9D%A5%E4%B8%80%E4%B8%AAconfig.json%E6%96%87%E4%BB%B6%EF%BC%8C%E6%8A%8A%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%A4%8D%E5%88%B6%E8%BF%9B%E5%8E%BB%EF%BC%8C%E7%84%B6%E5%90%8E%E6%94%B9%E4%B8%8Btoken%EF%BC%8C">https://sm.ms/注册个账号，这是一个云存储服务器，注册送你免费5G的容量，注册完账号后，点击打开配置文件，会蹦出来一个config.json文件，把下面的复制进去，然后改下token，</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;picBed&quot;: &#123;</span><br><span class="line">    &quot;uploader&quot;: &quot;smms&quot;, // 代表当前的默认上传图床为 SM.MS,</span><br><span class="line">    &quot;smms&quot;: &#123;</span><br><span class="line">      &quot;token&quot;: &quot;自己生成的token&quot; //一定要换</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;picgoPlugins&quot;: &#123;&#125; // 为插件预留</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>token是在<a href="https://sm.ms/%E7%BD%91%E7%AB%99%E9%87%8C%E9%9D%A2%E7%94%9F%E6%88%90%E7%9A%84%EF%BC%8C%E7%82%B9%E5%87%BBgenerate">https://sm.ms/网站里面生成的，点击generate</a> secret token就能生成一个新的token</p><p><img src="https://i.loli.net/2020/10/21/NYXhtZQnE8p9zxM.png" alt="image-20201021205605421"></p><p>配置好以后点击验证图片上传选项，显示成功上传图片并获得新的url就是配置成功了</p><p><img src="https://i.loli.net/2020/10/21/JYoLlO9nxpPt7rN.png" alt="image-20201021205839673"></p>]]></content>
       
       
       <categories>
