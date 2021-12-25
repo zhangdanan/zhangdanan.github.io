@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Github上的搜索技巧</title>
+      <link href="/2021/12/25/Github%E4%B8%8A%E7%9A%84%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/"/>
+      <url>/2021/12/25/Github%E4%B8%8A%E7%9A%84%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<p>例如：寻找stars大于1000的，并且是关于python的库，可以在搜索框内这样写：</p><blockquote><p>stars:&gt;1000 python</p></blockquote><p>如果是要stars和fork都大于1000的话，我们就写成：</p><blockquote><p>stars：&gt;1000 fork:&gt;1000 python</p></blockquote><p>全局搜索python外，我们还可以这样写</p><blockquote><p>in:name python</p></blockquote><p>in:name :关键字</p><p>这样子，我们搜索到的结果就是标题带有python的仓库了。</p><p>能搜索标题，当然也能搜索描述啦！</p><blockquote><p>in:description :关键字</p></blockquote><p>我最喜欢在GitHub上搜索教程了，比如python的教程</p><blockquote><p>in:description python教程</p></blockquote><p>这条指令的作用就是，将带有“python教程”描述字样的仓库搜索出来。</p><p>我们还可以查看最近更新的仓库有哪些：</p><blockquote><p>pushed:&gt;时间+关键字</p></blockquote><p>比如我要搜索最近更新的一些python的仓库</p><blockquote><p>pushed:&gt;2019-03-01 python</p></blockquote><p>我们还可以查找大神们的仓库</p><blockquote><p>user:用户名</p></blockquote><p>查找使用特定语言的仓库</p><blockquote><p>language:python</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git(一)---git的基本操作指令</title>
       <link href="/2021/12/19/Git(%E4%B8%80)---git%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/"/>
       <url>/2021/12/19/Git(%E4%B8%80)---git%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4/</url>
