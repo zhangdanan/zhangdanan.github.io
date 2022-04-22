@@ -4,23 +4,23 @@
   
     
     <entry>
-      <title>test</title>
+      <title>腾讯云申请免费一年SSL证书</title>
       <link href="/2022/04/22/%E6%B5%8B%E8%AF%95/"/>
       <url>/2022/04/22/%E6%B5%8B%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<p>是在语雀发布了每月分享，结果被举报了，我真是🤮了，也没啥少儿不宜的内容啊。</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j01.png"></p><p>到底是哪个人闲着没事举报了，以后就在网站更新把。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1-准备"><a href="#1-准备" class="headerlink" title="1.准备"></a>1.准备</h2><p>打开腾讯云网址：<a href="https://console.cloud.tencent.com/ssl">https://console.cloud.tencent.com/ssl</a></p><p>进入到SSL证书申请界面，选择申请免费证书</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j02.png" alt="j02"></p><h2 id="2-确认证书类型"><a href="#2-确认证书类型" class="headerlink" title="2.确认证书类型"></a>2.确认证书类型</h2><p>目前腾讯云上只有亚洲诚信一个可以免费申请SSL证书的机构，其他的都老贵了</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j03.png" alt="j03"></p><h2 id="3-填写资料"><a href="#3-填写资料" class="headerlink" title="3.填写资料"></a>3.填写资料</h2><p>算法选择的话，两个都可以，只不过ECC算法比较新，所以我选择了ECC算法，然后按照要填的填写</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j04.png" alt="j04"></p><h2 id="4-选择验证方式"><a href="#4-选择验证方式" class="headerlink" title="4.选择验证方式"></a>4.选择验证方式</h2><p>上面强烈推荐自动添加DNS验证，可以选择这个，方便。我申请这个证书几次才成功，失败的原因就是在申请SSL证书之前在DNS解析中添加了我的Hexo+Github搭建的博客网址的解析记录，所以失败了好几次，所以你在申请证书前，到DNS解析界面确认没有别的解析记录。</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j05.png" alt="j05"></p><h2 id="5-验证域名"><a href="#5-验证域名" class="headerlink" title="5.验证域名"></a>5.验证域名</h2><p>如果你选择了自动添加DNS验证方式，就直接点击下方蓝色的查看域名验证状态就行。</p><p>如果你选择了DNS验证方式，就需要你进入DNS解析界面，然后添加记录，把下面主机记录、记录类型、记录值填到DNS解析界面的添加记录的里面。</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j06.png" alt="j06"></p><h2 id="6-等待"><a href="#6-等待" class="headerlink" title="6.等待"></a>6.等待</h2><p>到了这一步就慢慢等就行，我成功的这次等了十分钟就ok了。</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j07.png" alt="j07"></p>]]></content>
       
       
       <categories>
           
-          <category> 自说自话 </category>
+          <category> 教程 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 语雀 </tag>
+            <tag> SSL证书 </tag>
             
         </tags>
       
