@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Hexo文章链接转换为数字编号</title>
+      <link href="/posts/4228930524/"/>
+      <url>/posts/4228930524/</url>
+      
+        <content type="html"><![CDATA[<h3 id="为什么要优化"><a href="#为什么要优化" class="headerlink" title="为什么要优化"></a>为什么要优化</h3><p>Hexo默认的文章永久链接格式是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">year/:month/:day/:title/</span><br></pre></td></tr></table></figure><p>这种格式遇到中文标题，很是不好，而且分享文章时，由于编码问题，会使得文章链接变成好长一串子，看着难受。</p><p><code>abbrlink</code>插件能很好的给我们解决这个问题。</p><p>插件<code>Github</code>地址为：<a href="https://github.com/rozbo/hexo-abbrlink">https://github.com/rozbo/hexo-abbrlink</a></p><h3 id="如何优化"><a href="#如何优化" class="headerlink" title="如何优化"></a>如何优化</h3><p>1.安装<code>abbrlink</code> 插件</p><p>在博客根目录下打开命令行。输入以下命令安装插件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><p>2.配置<code>config.yml</code> 文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#permalink: :year/:month/:day/:title/</span><br><span class="line">#permalink_defaults:</span><br><span class="line">permalink: posts/:abbrlink/</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32 #support crc16(default) and crc32</span><br><span class="line">  rep: dec   #support dec(default) and hex</span><br></pre></td></tr></table></figure><p>一定要注意把之前的<code>permalink: :year/:month/:day/:title/</code> 给注释掉，否者会报错。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#算法（目前支持crc16和crc32，默认为crc16）</span><br><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line"></span><br><span class="line"># 表示（生成的链接可以以十六进制或十进制值表示）</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br></pre></td></tr></table></figure><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/image-20220427152221327.png" alt="image-20220427152221327"></p><p><strong>参考链接：<a href="https://blog.csdn.net/Mculover666/article/details/103137719">https://blog.csdn.net/Mculover666/article/details/103137719</a></strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo优化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>npm安装报错（operation not permitted, mkdir &#39;C:\Program Files\nodejs\node_cache\_cacache&#39;）</title>
+      <link href="/posts/2481412396/"/>
+      <url>/posts/2481412396/</url>
+      
+        <content type="html"><![CDATA[<h1 id="npm安装报错（operation-not-permitted-mkdir-‘C-Program-Files-nodejs-node-cache-cacache’）"><a href="#npm安装报错（operation-not-permitted-mkdir-‘C-Program-Files-nodejs-node-cache-cacache’）" class="headerlink" title="npm安装报错（operation not permitted, mkdir ‘C:\Program Files\nodejs\node_cache_cacache’）"></a>npm安装报错（operation not permitted, mkdir ‘C:\Program Files\nodejs\node_cache_cacache’）</h1><p>今天安装<code>abbrlink</code> 插件的时候突然报错</p><blockquote><p>npm install EPERM: operation not permitted, mkdir ‘D:\nodejs\node_cache_cacache’</p></blockquote><p>看了下报错内容，是没权限啊，于是按照网上的教程修改<code>nodejs</code> 文件夹的权限，修改完之后发现还是报这个错误。</p><p>又查看了下解决方法，删除c盘用户文件夹下的<code>.npmrc</code> 隐藏文件即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> error </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> npm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux中使用nginx配置静态项目</title>
       <link href="/posts/2763963274/"/>
       <url>/posts/2763963274/</url>
