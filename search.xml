@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Linux中使用nginx配置静态项目</title>
+      <link href="/2022/04/26/Linux%E4%B8%AD%E4%BD%BF%E7%94%A8nginx%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E9%A1%B9%E7%9B%AE/"/>
+      <url>/2022/04/26/Linux%E4%B8%AD%E4%BD%BF%E7%94%A8nginx%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E9%A1%B9%E7%9B%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="部署静态资源文件"><a href="#部署静态资源文件" class="headerlink" title="部署静态资源文件"></a>部署静态资源文件</h1><p>我把我的静态资源放在了<code>/usr/local/nginx/html</code>下，我把原先的文件夹里面的文件都给移动到<code>html</code>文件夹下，把原先的文件夹给删了，这是为了方便。</p><p><img src="https://zdnzs-1258771336.cos.ap-nanjing.myqcloud.com/image/j08.png" alt="j08"></p><h1 id="Nginx配置静态资源"><a href="#Nginx配置静态资源" class="headerlink" title="Nginx配置静态资源"></a>Nginx配置静态资源</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        #listen [::]:          80 ipv6only=on default_server;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        charset utf-8;</span><br><span class="line">        location / &#123;</span><br><span class="line">             root  /usr/soft/nginx/html;</span><br><span class="line">             try_files  $uri   $uri/    /index/html   last</span><br><span class="line">             index  index.html index.htm;</span><br><span class="line">         &#125;</span><br><span class="line">        error_page  404                                          /404.html;</span><br><span class="line">         location = /404.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125; </span><br></pre></td></tr></table></figure><h1 id="重启Nginx服务器"><a href="#重启Nginx服务器" class="headerlink" title="重启Nginx服务器"></a>重启Nginx服务器</h1><p>在<code>/usr/local/nginx/sbin</code> 目录下使用<code>./nginx -s reload</code> 命令进行重启nginx</p><h1 id="访问静态资源"><a href="#访问静态资源" class="headerlink" title="访问静态资源"></a>访问静态资源</h1><p>在浏览器里输入服务器ip地址就能访问了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 运维 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>腾讯云申请免费一年SSL证书</title>
       <link href="/2022/04/22/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4SSL%E8%AF%81%E4%B9%A6/"/>
       <url>/2022/04/22/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%94%B3%E8%AF%B7%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4SSL%E8%AF%81%E4%B9%A6/</url>
